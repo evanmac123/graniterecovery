@@ -14,6 +14,7 @@ $(document).foundation();
 $(document).on("scroll", function() {
 	if($(document).scrollTop()>100) {
     $(".top-bar").addClass("top-bar-collapsed");
+    $(".hamburger-menu").addClass("mobile-menu-collapsed");
 		$(".top-bar-right-menu").addClass("top-bar-right-menu-collapsed");
     $(".top-bar-right-menu-number").addClass("top-bar-right-number-collapsed");
     $(".top-bar-right-share").addClass("top-bar-right-share-collapsed");

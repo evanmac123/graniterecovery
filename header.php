@@ -49,11 +49,13 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php
 						// Display the Custom Logo, default logo, or the site's name
-						if ( has_custom_logo() ) {
-									the_custom_logo();
-									} else { ?>
+						if ( get_theme_mod( 'header_logo' ) ) { ?>
+									<img class="custom-logo" src="<?php echo get_theme_mod( 'header_logo' ); ?>">
+								<?php
+									}
+						 else { ?>
 									<img alt="Granite Recovery" src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/logo.png" class="custom-logo"/>
-									<?php } ?>
+							<?php } ?>
 							</a>
 							<button class="responsive menu-icon" aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>"  type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>">
 									<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/icons/menu.svg">

@@ -1,7 +1,79 @@
-.footer-container {
-  @include xy-grid-container;
-  border-top: 1px solid $medium-gray;
-  margin-top: rem-calc(60);
+.footer{
+  background-color: $black;
+  color:$white;
+  .footer-container {
+    @include xy-grid-container;
+    border-top: 1px solid $medium-gray;
+    margin-top: rem-calc(60);
+    .widget_nav_menu{
+      li{
+        width:100%;
+        a{
+          font-family: $header-font-family;
+          color:$green;
+          font-size:15px;
+        }
+      }
+    }
+  .footer-info{
+    &-title{
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    &-address{
+      font-size:1em;
+      margin-bottom: 1em;
+    }
+    .row{
+      margin-bottom:1em;
+    }
+    .footer-info-n-s{
+       float:left;;
+       margin-bottom:30px;
+       width: 100%;
+    }
+
+    &-number{
+      float:left;
+      color: $dark-orange;
+      font-weight:700;
+      font-size:1.2em;
+      font-family: "ProximaNova-Bold";
+    }
+    &-social{
+      float:left;
+      a{
+        float: left;
+        opacity: 1;
+        transition:.4s all;
+        &:hover{
+          opacity: .7;
+          transition:.4s all;
+        }
+        &:first-child::before{
+          display:none;
+        }
+        &::before{
+          content: "|";
+          display:block;
+          margin: 0 .5em;
+          color: white;
+          float: left;
+
+        }
+        img{
+          width:20px;
+      }
+    }
+  }
+    &-logo{
+      margin-bottom:30px;
+    }
+    &-copyright{
+      font-size:.8em;
+    }
+  }
+  }
 }
 
 .footer-grid {

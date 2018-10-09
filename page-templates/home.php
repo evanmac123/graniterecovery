@@ -4,21 +4,19 @@ Template Name: Home
 */
 get_header(); ?>
 
-<header class="front-hero" role="banner">
-	<div class="marketing">
-		<div class="tagline">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
-			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>
+<div class="home">
+	<section>
+		<h1 style="display:none;">Granite Recovery Center</h1>
+		<div class="home__slider hide-for-small-only">
+			<?php the_field("home-slider"); ?>
 		</div>
-
-		<div class="watch">
-			<span id="stargazers"><a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a></span>
-			<span id="twitter"><a href="https://twitter.com/olefredrik">@olefredrik</a></span>
-		</div>
-	</div>
-
-</header>
+					<div class="home__slider show-for-small-only">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>" alt="Teen in treatment"/>
+							<h2 class="home-slider-heading-mobile">TRUSTED TREATMENT FOR TEEN MENTAL HEALTH, BEHAVIORAL, AND SUBSTANCE USE ISSUES.</h2>
+							<p class="home__slider-description-mobile" style="text-align: left;">Muir Wood is a world renowned northern California treatment center for teens struggling with mental health, behavioral, and substance abuse issues. We offer residential inpatient treatment for teen boys 12&ndash;17 in Sonoma County, and outpatient treatment for boys and girls 12&ndash;19 in Marin County. <a href="/about-muir-wood/"><strong>Read more&raquo;</strong></a></p>
+							<p class="align-center"><a class="button-white" href="/getting-started/"><strong>Getting Started</strong></a></p>
+					</div>
+	</section>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
