@@ -3,3 +3,25 @@ body#tinymce{
   max-width: $grid-row-width; // Give the editor a max-width
   padding: rem-calc(20) !important;
 }
+
+.reveal.full {
+  padding:0;
+  overflow:hidden;
+  background-color: $black;
+  button{
+    transition: all .4s;
+    &:hover{
+      color:$white;
+      transition: all .4s;
+    }
+  }
+
+  iframe{
+    padding: 40px;
+    // width: 80%;
+    // height: 80%;
+    // margin-left: 10%;
+    // top: 50px;
+
+  }
+}

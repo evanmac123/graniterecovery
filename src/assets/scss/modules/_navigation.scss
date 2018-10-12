@@ -1,13 +1,17 @@
 // Navigation breakpoints
 
+#wpadminbar{
+display:none;
+
+}
+
 .mobile-menu,
 .site-title-bar {
-  @include hide-for(medium);
 }
 
 .desktop-menu,
 .site-navigation .top-bar-left {
-  @include show-for(medium);
+  //@include show-for(medium);
 }
 // Site title
 .site-desktop-title a {
@@ -110,6 +114,12 @@ body {
       font-family: 'RockwellStd';
       color: $white;
       text-transform: uppercase;
+      @include breakpoint(small down) {
+        right: 60px;
+        left: 0;
+        position:absolute;
+        width: auto;
+      }
 
       &-search {
         position: absolute;
@@ -246,6 +256,12 @@ body {
         overflow: hidden;
         transition: 0.4s all;
         max-height: 2000px;
+        @include breakpoint(small down) {
+          right: 0;
+          left: 0;
+          position:absolute;
+          width: auto;
+        }
 
         &-number {
           background-color: $red;

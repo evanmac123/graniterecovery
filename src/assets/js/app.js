@@ -11,8 +11,8 @@ import Foundation from 'foundation-sites';
 $(document).foundation();
 
 
-$(document).on("scroll", function() {
-	if($(document).scrollTop()>100) {
+$(window).on("load resize scroll", function(e) {
+	if($(document).scrollTop()>100 || $(window).width() < 960) {
     $(".top-bar").addClass("top-bar-collapsed");
     $(".hamburger-menu").addClass("mobile-menu-collapsed");
 		$(".top-bar-right-menu").addClass("top-bar-right-menu-collapsed");

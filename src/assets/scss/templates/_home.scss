@@ -1,0 +1,310 @@
+.home {
+  &-slider {
+    .slider-header {
+      color: white;
+      font-family: "Chunkfive";
+      margin: 0;
+      line-height: 0.84;
+      font-size: 100px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      width: 700px;
+      padding: 5px;
+      position: relative;
+
+      &:hover {
+        &::after {
+          right: 30px;
+          transition: 0.4s all ease-in-out;
+        }
+      }
+
+      &::after {
+        color: $green;
+        transition: 0.4s all ease-in-out;
+        background-image: url("../images/icons/right-arrow.svg");
+        width: 40px;
+        content: "";
+        height: 40px;
+        display: block;
+        background-size: contain;
+        bottom: 30px;
+        right: 40px;
+        position: absolute;
+        background-repeat: no-repeat;
+      }
+
+      a {
+        color: white;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 604px;
+          height: 10px;
+          background-color: $green;
+          transform-origin: left;
+          transform: scaleX(0);
+          transition: transform 0.45s;
+          margin-top: 0;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+          transition: 0.4s all ease-in-out;
+        }
+      }
+    }
+
+    &-mobile {
+      background-image: url("../images/header.jpg");
+      height: 400px;
+      width: 100%;
+      background-size: cover;
+
+      &-logo {
+        img {
+          width: 80%;
+          margin-left: 10%;
+          margin-top: 40px;
+        }
+      }
+
+      .slider-header {
+        font-size: 40px;
+        width: 80%;
+        padding-top: 80px;
+        padding-left: 10%;
+
+        &::after {
+          bottom: unset;
+          right: unset;
+        }
+
+        &:hover {
+          &::after {
+            bottom: unset;
+            right: unset;
+          }
+        }
+      }
+    }
+  }
+
+  &-intro {
+    //info&location
+
+    &-info {
+      background-color: $black;
+      padding: 50px;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-container {}
+
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+
+    &-location {
+      a {
+        color: white;
+        position: relative;
+        text-align: center;
+        min-height: 400px;
+        background-image: cover;
+        border-bottom: 1px solid #ffc4c4;
+        @include breakpoint(medium down) {
+          min-height: 300px;
+        }
+
+        &::after {
+          content: ""; // ::before and ::after both require content
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $red;
+          z-index: 1;
+          opacity: 0.8;
+          transition: all 0.4s ease-in-out;
+        }
+
+        .location-container {
+          padding: 25px;
+          z-index: 2;
+          position: relative;
+
+          .title {
+            float: right;
+            width: 100%;
+            transition: all 0.4s ease-in-out;
+            font-size: 1.2em;
+            position: absolute;
+            top: 240px;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            @include breakpoint(medium down) {
+              top: 240px;
+            }
+          }
+
+          .content {
+            float: right;
+            margin-bottom: 40px;
+            transition: all 0.4s ease-in-out;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            padding: 0 20px;
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          .title {
+            transform: translateY(-200px);
+            transition: all 0.4s ease-in-out;
+          }
+
+          .content {
+            transition: all 0.4s ease-in-out;
+            opacity: 1;
+          }
+
+          &::after {
+            opacity: 1;
+            background-color: $black;
+            transition: all 0.4s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  &-video{
+    height: 500px;
+    width:100%;
+    @include breakpoint(medium down) {
+      height: auto;
+
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse; //switches every other video section
+    }
+
+    &-label{
+      background-color: $black;
+      color: $white;
+      float: left;
+      margin:0px;
+      padding:0;
+      h3{
+        transform: rotate(90deg) translateY(-60px);
+        transform-origin: top left 0;
+        width: 300px;
+        padding-left: 30px;
+        margin:0;
+        @include breakpoint(medium down) {
+          transform: rotate(0deg) translateY(0px);
+          width: 100%;
+          margin-top: 5px;
+          padding:20px 50px;
+        }
+      }
+    }
+    a{
+      background-size: cover;
+      display: flex;
+      color:white;
+      position:relative;
+      @include breakpoint(medium down) {
+        height:300px !important;
+      }
+
+      &::after {
+        content: ""; // ::before and ::after both require content
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        z-index: 1;
+        mix-blend-mode: darken;
+        opacity: 0.5;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          opacity: .8;
+          transition: 0.4s all ease-in-out;
+        }
+      }
+
+      img{
+        width:10%;
+        width: 10%;
+        position: absolute;
+        top: 20px;
+        right: 3%;
+        z-index: 3;
+
+      }
+    }
+    &-cell-content{
+      z-index: 4;
+      align-self: flex-end;
+      color:$white;
+      padding: 60px;
+      @include breakpoint(medium down) {
+        padding:50px !important;
+      }
+    }
+
+    &-cell-title{
+      margin-bottom:10px;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 1;
+      @include breakpoint(medium down) {
+        font-size:2.0rem !important;
+      }
+    }
+
+    &-cell-author{
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    &-cell-position{
+      font-style:italic;
+    }
+
+    .video-section-1{
+      a{
+      height: 100%;
+      }
+    }
+    .video-section-2{
+      a{
+        height:50%;
+        .home-video-cell-content{
+          padding:30px;
+        }
+        .home-video-cell-title{
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+
+
+  }
+}
