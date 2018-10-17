@@ -120,3 +120,70 @@ array(
 }
 
 add_action('customize_register', 'menu_info_customize');
+
+
+
+/////Sidebar
+
+
+function sidebar_options_customize($wp_customize) {
+$wp_customize->add_section('sidebar_options', array(
+'title' => 'Sidebar Options',
+'description' => '',
+'priority' => 120,
+));
+
+// add a setting for the sidebar_background
+$wp_customize->add_setting('sidebar_featured_background');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sidebar_featured_background',
+array(
+'label' => 'Sidebar Featured Page Background',
+'section' => 'sidebar_options',
+'settings' => 'sidebar_featured_background',
+) ) );
+
+// add a setting for the sidebar_background
+$wp_customize->add_setting('sidebar_featured_title');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_title',
+array(
+'label' => 'Sidebar Featured Page title',
+'section' => 'sidebar_options',
+'settings' => 'sidebar_featured_title',
+) ) );
+
+// add a setting for the sidebar_background
+$wp_customize->add_setting('sidebar_featured_paragraph');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_paragraph',
+array(
+'label' => 'Sidebar Featured Page paragraph',
+'section' => 'sidebar_options',
+'settings' => 'sidebar_featured_paragraph',
+) ) );
+
+// add a setting for the sidebar_background
+$wp_customize->add_setting('sidebar_featured_button_link');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_link',
+array(
+'label' => 'Sidebar Featured Page Button Link',
+'section' => 'sidebar_options',
+'settings' => 'sidebar_featured_button_link',
+) ) );
+
+// add a setting for the sidebar_background
+$wp_customize->add_setting('sidebar_featured_button_text');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_text',
+array(
+'label' => 'Sidebar Featured Page title',
+'section' => 'sidebar_options',
+'settings' => 'sidebar_featured_button_text',
+) ) );
+
+
+}
+
+add_action('customize_register', 'sidebar_options_customize');

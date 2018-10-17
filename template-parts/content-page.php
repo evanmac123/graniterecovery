@@ -8,24 +8,48 @@
  */
 
 ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="entry-content">
+					<?php
+						while ( have_rows("flexible-content") ) : the_row();
+						if( get_row_layout() == 'flex-grid' ): ?>
+						<div class="grid-x grid-padding-x grid-margin-y flex-grid">
+							<?php while ( have_rows("simple-content-row") ) : the_row();?>
+								<div class="cell auto">
+									<?php echo get_sub_field('content-cell');?>
+								</div>
+							<?php
+							endwhile;?>
+						</div>
+					<?php elseif( get_row_layout() == 'alternating-grid' ): ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header>
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
-	</div>
-	<footer>
-		<?php
-			wp_link_pages(
-				array(
-					'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-					'after'  => '</p></nav>',
-				)
-			);
-		?>
-		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
-	</footer>
-</article>
+							<?php while ( have_rows("alternating-row") ) : the_row();?>
+								<div class="grid-x grid-padding-x grid-margin-y flex-grid alternating">
+									<div class="cell large-4 medium-">
+										<?php echo get_sub_field('alternating-cell-small');?>
+									</div>
+									<div class="cell large-8">
+										<?php echo get_sub_field('alternating-cell-large');?>
+									</div>
+								</div>
+						<?php
+						endwhile;
+						elseif( get_row_layout() == '    ' ):?>
+
+						<?php
+						elseif( get_row_layout() == 'row_4_columns' ): ?>
+						<?php endif;
+						endwhile;?>
+				</div>
+			<footer>
+				<?php
+					wp_link_pages(
+						array(
+							'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
+							'after'  => '</p></nav>',
+						)
+					);
+				?>
+				<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
+			</footer>
+		</article>

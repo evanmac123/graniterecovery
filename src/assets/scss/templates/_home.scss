@@ -93,7 +93,6 @@
 
   &-intro {
     //info&location
-
     &-info {
       background-color: $black;
       padding: 50px;
@@ -187,45 +186,47 @@
       }
     }
   }
-  &-video{
+
+  &-video {
     height: 500px;
-    width:100%;
+    width: 100%;
     @include breakpoint(medium down) {
       height: auto;
-
     }
 
     &:nth-child(even) {
       flex-direction: row-reverse; //switches every other video section
     }
 
-    &-label{
+    &-label {
       background-color: $black;
       color: $white;
       float: left;
-      margin:0px;
-      padding:0;
-      h3{
+      margin: 0;
+      padding: 0;
+
+      h3 {
         transform: rotate(90deg) translateY(-60px);
         transform-origin: top left 0;
         width: 300px;
         padding-left: 30px;
-        margin:0;
+        margin: 0;
         @include breakpoint(medium down) {
           transform: rotate(0deg) translateY(0px);
           width: 100%;
           margin-top: 5px;
-          padding:20px 50px;
+          padding: 20px 50px;
         }
       }
     }
-    a{
+
+    a {
       background-size: cover;
       display: flex;
-      color:white;
-      position:relative;
+      color: white;
+      position: relative;
       @include breakpoint(medium down) {
-        height:300px !important;
+        height: 300px !important;
       }
 
       &::after {
@@ -244,67 +245,126 @@
 
       &:hover {
         &::after {
-          opacity: .8;
+          opacity: 0.8;
           transition: 0.4s all ease-in-out;
         }
       }
 
-      img{
-        width:10%;
+      img {
+        width: 10%;
         width: 10%;
         position: absolute;
         top: 20px;
         right: 3%;
         z-index: 3;
-
       }
     }
-    &-cell-content{
+
+    &-cell-content {
       z-index: 4;
       align-self: flex-end;
-      color:$white;
+      color: $white;
       padding: 60px;
       @include breakpoint(medium down) {
-        padding:50px !important;
+        padding: 50px !important;
       }
     }
 
-    &-cell-title{
-      margin-bottom:10px;
+    &-cell-title {
+      margin-bottom: 10px;
       font-weight: 700;
       font-size: 3.5rem;
       line-height: 1;
       @include breakpoint(medium down) {
-        font-size:2.0rem !important;
+        font-size: 2.0rem !important;
       }
     }
 
-    &-cell-author{
+    &-cell-author {
       font-size: 1rem;
       font-weight: 700;
     }
-    &-cell-position{
-      font-style:italic;
+
+    &-cell-position {
+      font-style: italic;
     }
 
-    .video-section-1{
-      a{
-      height: 100%;
+    .video-section-1 {
+      a {
+        height: 100%;
       }
     }
-    .video-section-2{
-      a{
-        height:50%;
-        .home-video-cell-content{
-          padding:30px;
+
+    .video-section-2 {
+      a {
+        height: 50%;
+
+        .home-video-cell-content {
+          padding: 30px;
         }
-        .home-video-cell-title{
+
+        .home-video-cell-title {
           font-size: 1.5rem;
         }
       }
     }
-
-
-
   }
+
+  .orange{
+    //newsletter code is in subscribe
+    &-network{
+      background-color: $dark-orange;
+      padding: 75px;
+      color: $white;
+      .cell{
+        padding-top: 0;
+      }
+      h4{
+        text-transform: uppercase;
+      }
+      a{
+        background-color: #fd611d;
+        color: white;
+        text-transform: uppercase;
+        padding: 15px 8px 8px 8px;
+        font-family: $header-font-family;
+
+      }
+    }
+  }
+
+  &-team{
+    padding: 150px 0;
+    text-align:center;
+    color: white;
+    min-height: 300px;
+    background-size:cover;
+    position:relative;
+    justify-content: center;
+
+    &::after {
+      content: ""; // ::before and ::after both require content
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      z-index: 0;
+      opacity: 0.6;
+      transition: all 0.4s ease-in-out;
+    }
+    &-content{
+      z-index: 3;
+      position:relative;
+    }
+    a{
+      text-transform: uppercase;
+      background-color: $light-green;
+      color: white;
+      text-transform: uppercase;
+      padding: 15px 15px 8px 15px;
+      font-family: $header-font-family;
+    }
+}
 }

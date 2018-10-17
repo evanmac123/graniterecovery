@@ -59,6 +59,48 @@
   }
 }
 
+//subscribe-form
+.orange{
+  &-newsletter{
+      background-color: $mid-orange;
+      padding: 75px;
+      color: $white;
+      h4{
+        text-transform: uppercase;
+        margin-bottom:1em;
+      }
+      .es_textbox {
+          padding-bottom: 10px;
+          width: 70%;
+          float: left;
+          input{
+            background-color: transparent;
+            border: 1px solid white;
+            color:white;
+          }
+      }
+      .es_lablebox label{
+        color:white;
+      }
+      .es_button {
+        width: 20%;
+        margin-left: 5%;
+        float: left;
+        padding:0;
+        background-color: $light-orange;
+        .es_submit_button{
+          padding: 15px 6px 8px 6px;
+          text-transform: uppercase;
+          font-family: $header-font-family;
+          color: white;
+          border: 0;
+          line-height: 1rem;
+          background-color: orange;
+       }
+      }
+    }
+  }
+
 @media only screen and (max-width: 800px) {
   .footer{
     .nf-form-cont{

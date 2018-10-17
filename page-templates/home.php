@@ -174,7 +174,62 @@ get_header(); ?>
 		 	$i++;
 			endwhile; ?>
 	<?php endif; ?>
+	<section class="orange grid-x grid-padding-x">
+		<div class="orange-newsletter cell large-6">
+			<h4> The GRC Newsletter</h4>
+			<p> Sign up for GRC’s free bi-monthly newsletter featuring new perspectives on growth and recovery. </p>
+				<?php es_subbox( $desc = "", $group = "" ); ?>
+		</div>
+		<div class="orange-network cell large-6">
+			<h4>GRC is an In-Network Provider</h4>
+			<div class="grid-x grid-padding-x grid-padding-y">
+				<?php
+					$images = get_field('home-network-gallery');
+					if( $images ): ?>
+					<?php foreach( $images as $image ): ?>
+					<div class="cell small-4">
+						<span class="helper"></span>
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>
+					<?php endforeach; ?>
+					<?php endif; ?>
+					<div class="cell small-4 orange-network-link">
+						<a class="button" href="<?php the_field("home-network-link"); ?>">
+							Learn More
+						</a>
+					</div>
+			</div>
+		</div>
+	</section>
+	<section  class="home-team grid-x" style="background-image:url('<?php the_field('home-team-background'); ?>');">
+		<div class="home-team-content cell 6 large-6 medium-centered">
+		<h3>
+			<?php the_field("home-team-title"); ?>
+		</h3>
+		<p>
+		<?php the_field("home-team-paragraph"); ?></p>
+		<a class="button" href="<?php the_field("home-team-link"); ?>">
+			 <?php the_field("home-team-button-text"); ?>
+		</a>
+	</div>
+	</section>
+	<section class="white-block grid-x grid-padding-x">
+		<div class=" cell large-6">
+			<div class="grid-x grid-padding-x grid-padding-y">
+				<?php
+					$images = get_field('home-seen-gallery');
+					if( $images ): ?>
+					<?php foreach( $images as $image ): ?>
+					<div class="cell medium-4">
+						<span class="helper"></span>
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>
+					<?php endforeach; ?>
+					<?php endif; ?>
+			</div>
+		</div>
+		<div class=" cell large-6">
+		</div>
+	</section>
 </div>
-
-
 <?php get_footer();

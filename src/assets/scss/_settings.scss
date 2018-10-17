@@ -85,6 +85,7 @@ $black: #191919;
 $white: #fefefe;
 $red: #dc2c28;
 $light-orange: #f38118;
+$mid-orange: #ef8200;
 $dark-orange: #ec4e1b;
 $green: #839f02;
 $light-green:#94b10d;
@@ -130,8 +131,9 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: 100px,
+  medium: 150px
+
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -145,7 +147,7 @@ $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.4;
+$header-lineheight: 1.2;
 $header-margin-bottom: 2rem;
 $header-styles: (
   small: (
@@ -159,9 +161,9 @@ $header-styles: (
   medium: (
     'h1': ('font-size': 44),
     'h2': ('font-size': 40),
-    'h3': ('font-size': 27),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
+    'h3': ('font-size': 28),
+    'h4': ('font-size': 22),
+    'h5': ('font-size': 18),
     'h6': ('font-size': 16),
   ),
 );
@@ -872,7 +874,7 @@ $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
   small: 20px,
-  medium: 30px
+  medium: 80px
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
