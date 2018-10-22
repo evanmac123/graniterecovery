@@ -19,7 +19,7 @@ get_header(); ?>
 						<?php
 							}
 				 else { ?>
-							<img alt="Granite Recovery" src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/logo.png" class="custom-logo"/>
+							<img alt="Granite Recovery" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/logo.png" class="custom-logo"/>
 					<?php } ?>
 			</a>
 
@@ -112,7 +112,7 @@ get_header(); ?>
 							<?php echo $video_author_position_1; ?>
 						</div>
 					</div>
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/icons/play.svg">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
 				</a>
 			</div>
 			<div class="home-video-cell cell large-4 video-section-2">
@@ -127,7 +127,7 @@ get_header(); ?>
 							<div class="home-video-cell-position">
 								<?php echo $video_author_position_2; ?>
 							</div>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/icons/play.svg">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
 						</div>
 					</a>
 					<a data-open="video3-<?php echo $i ?>" style="background-image:url('<?php echo $video_still_3; ?>');">
@@ -141,7 +141,7 @@ get_header(); ?>
 							<div class="home-video-cell-position">
 								<?php echo $video_author_position_3; ?>
 							</div>
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/images/icons/play.svg">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
 					</div>
 				</a>
 			</div>

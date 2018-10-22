@@ -1,7 +1,7 @@
 // Navigation breakpoints
 
 #wpadminbar{
-//display:none;
+display:none;
 
 }
 
@@ -320,14 +320,17 @@ body {
             background-color: $green;
           }
 
-          &:hover .first-sub {
-            display: block;
+          .first-sub {
             top: 120px;
-            right: 300px;
+            right: 310px;
             width: 220px;
             position: fixed;
             text-transform: capitalize;
             min-height: 419px;
+          }
+
+          &:hover .first-sub {
+            display: block;
 
             li:hover {
               background-color: $light-green;
@@ -335,13 +338,13 @@ body {
 
             .menu-item-has-children:hover .submenu {
               top: 120px;
-              right: 520px;
+              right: 530px;
               width: 220px;
               position: fixed;
               display: block;
               min-height: 419px;
               font-family: "ProximaNova-Bold";
-              font-family: 14px;
+              font-family: 13px;
             }
           }
         }

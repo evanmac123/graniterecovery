@@ -14,7 +14,7 @@ $wp_customize->add_section('main_menu_info', array(
 'title' => 'Main Menu and Footer Information',
 'description' => '',
 'priority' => 120,
-));
+) );
 
 // add a setting for the site logo
 $wp_customize->add_setting('header_logo');
@@ -28,7 +28,10 @@ array(
 
 
 // add a setting for the socail-link
-$wp_customize->add_setting('facebook_link');
+$wp_customize->add_setting('facebook_link', array(
+  'default'   => 'www.google.com',
+  'transport' => 'refresh',
+));
 // Add a control for the phone number
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'facebook_link',
 array(
@@ -39,7 +42,10 @@ array(
 ) ) );
 
 // add a setting for the socail-link
-$wp_customize->add_setting('instagram_link');
+$wp_customize->add_setting('instagram_link', array(
+  'default'   => 'www.google.com',
+  'transport' => 'refresh',
+));
 // Add a control for the phone number
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'instagram_link',
 array(
@@ -51,7 +57,10 @@ array(
 
 
 // add a setting for the socail-link
-$wp_customize->add_setting('pinterest_link');
+$wp_customize->add_setting('pinterest_link', array(
+  'default'   => 'www.google.com',
+  'transport' => 'refresh',
+));
 // Add a control for the phone number
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'pinterest_link',
 array(
@@ -63,7 +72,10 @@ array(
 
 
 // add a setting for the socail-link
-$wp_customize->add_setting('youtube_link');
+$wp_customize->add_setting('youtube_link', array(
+  'default'   => 'www.google.com',
+  'transport' => 'refresh',
+));
 // Add a control for the phone number
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'youtube_link',
 array(
@@ -75,7 +87,10 @@ array(
 
 
 // add a setting for the site phone number
-$wp_customize->add_setting('phone_number');
+$wp_customize->add_setting('phone_number', array(
+  'default'   => '(866) 237-6140)',
+) );
+
 // Add a control for the phone number
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'phone_number',
 array(
@@ -86,7 +101,9 @@ array(
 ) ) );
 
 // add a setting for the site address
-$wp_customize->add_setting('address');
+$wp_customize->add_setting('address', array(
+  'default'   => '6 Manor Pkwy, Salem, NH 03079',
+) );
 // Add a control for the address
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'address',
 array(
@@ -97,7 +114,10 @@ array(
 ) ) );
 
 // add a setting for the site address
-$wp_customize->add_setting('copyright');
+$wp_customize->add_setting('copyright', array(
+  'default'   => '© Copyright 2018 Granite Recovery Centers',
+  'transport' => 'refresh',
+) );
 // Add a control for the address
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'copyright',
 array(
@@ -134,7 +154,10 @@ $wp_customize->add_section('sidebar_options', array(
 ));
 
 // add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_background');
+$wp_customize->add_setting('sidebar_featured_background', array(
+  'default'   => '',
+  'transport' => 'refresh',
+));
 // Add a control to upload the logo
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sidebar_featured_background',
 array(
@@ -144,7 +167,9 @@ array(
 ) ) );
 
 // add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_title');
+$wp_customize->add_setting('sidebar_featured_title', array(
+  'default'   => 'Passion. Purpose. Understanding.',
+));
 // Add a control to upload the logo
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_title',
 array(
@@ -154,7 +179,10 @@ array(
 ) ) );
 
 // add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_paragraph');
+$wp_customize->add_setting('sidebar_featured_paragraph', array(
+  'default'   => '',
+));
+
 // Add a control to upload the logo
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_paragraph',
 array(
@@ -164,7 +192,9 @@ array(
 ) ) );
 
 // add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_button_link');
+$wp_customize->add_setting('sidebar_featured_button_link', array(
+  'default'   => '',
+));
 // Add a control to upload the logo
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_link',
 array(
@@ -174,10 +204,11 @@ array(
 ) ) );
 
 // add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_button_text');
+$wp_customize->add_setting('sidebar_featured_button_text', array(
+  'default'   => 'Meet Our Team',
+));
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_text',
-array(
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_text', array( 
 'label' => 'Sidebar Featured Page title',
 'section' => 'sidebar_options',
 'settings' => 'sidebar_featured_button_text',
@@ -187,3 +218,20 @@ array(
 }
 
 add_action('customize_register', 'sidebar_options_customize');
+
+/**
+  * Set default settings when switching themes
+  * See all default setting id's at framework/customizer/settigs/[base].php
+  */
+function my_default_total_settings() {
+
+	set_theme_mod( 'facebook_link', 'www.google.com' );
+	set_theme_mod( 'instagram_link', 'www.google.com' );
+	set_theme_mod( 'pinterest_link', 'www.google.com' );
+	set_theme_mod( 'youtube_link', 'www.google.com' );
+	set_theme_mod( 'phone_number', '(866) 237-6140)' );
+	set_theme_mod( 'address', '6 Manor Pkwy, Salem, NH 03079' );
+	set_theme_mod( 'copyright', '© Copyright 2018 Granite Recovery Centers' );
+
+}
+add_action( 'after_switch_theme', 'my_default_total_settings' );
