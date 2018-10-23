@@ -67,6 +67,38 @@
 // 1. Global
 // ---------
 
+@font-face {
+    font-family: "ProximaNova-Reg";
+    src: url(../fonts/ProximaNova-Reg.otf);
+}
+@font-face {
+    font-family: "Chunkfive";
+    src: url(../fonts/Chunkfive.otf);
+}
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: url(../fonts/ProximaNova-Bold.otf);
+}
+@font-face {
+    font-family: "RockwellStd-Bold";
+    src: url(../fonts/RockwellStd-Bold.otf);
+}
+@font-face {
+    font-family: "RockwellStd";
+    src: url(../fonts/RockwellStd.otf);
+}
+@font-face {
+    font-family: "Rockwell-Light";
+    src: url(../fonts/RockwellStd.otf);
+}
+@font-face {
+    font-family: "ProximaNova-Reg";
+    src: url(../fonts/ProximaNova-Reg.otf);
+}
+
+
+
+
 $global-font-size: 100%;
 $global-width: rem-calc(1920);
 $global-lineheight: 1.5;

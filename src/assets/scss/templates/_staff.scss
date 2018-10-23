@@ -1,0 +1,63 @@
+
+
+.name{
+  padding-top:20px;
+  color: $light-green;
+  margin-bottom: 0;
+  font-size: 1.4em;
+}
+
+.position{
+  font-size: 1.1em;
+  font-family: $body-font-family;
+}
+
+.reveal.staff-bio {
+  border-radius: 10px;
+  padding: 30px;
+}
+ .reveal.staff-bio img {
+  padding: 0px 25px 25px 0;
+}
+ .reveal.staff-bio .name {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+ .reveal.staff-bio h2 {
+   color: $light-green;
+   margin-bottom:0;
+   font-size: 1.5em;
+}
+
+.reveal.staff-bio h3 {
+  margin-bottom:0;
+  font-size: 1.1em;
+  font-family: $body-font-family;
+  overflow:hidden;
+}
+
+ .reveal.staff-bio h3:after {
+  display: block;
+  content: '';
+  height: 1px;
+  background-color: #d8d8d8;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ .reveal.staff-bio a {
+  color: $light-green;
+}
+
+.reveal.staff-bio p{
+  font-size: 1.0em;
+  line-height: 1.7em;
+}
+
+.reveal.staff-bio img{
+  float:left;
+}
+
+.float-left{
+  float:left;
+}

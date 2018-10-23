@@ -146,21 +146,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-templates\/page-full-width.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-templates\/page-sidebar-left.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-templates\/page-sidebar-left.php"
+                "value": "default"
             }
         ],
         [
@@ -187,5 +173,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539713240
+    "modified": 1540230788
 }

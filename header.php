@@ -15,14 +15,6 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/fonts/ProximaNova-Reg.otf" rel="stylesheet">
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/fonts/ProximaNova-Bold.otf" rel="stylesheet">
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/fonts/RockwellStd-Bold.otf" rel="stylesheet">
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/fonts/Chunkfive.otf" rel="stylesheet">
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/fonts/RockwellStd.otf" rel="stylesheet">
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/fonts/RockwellStd-Light.otf" rel="stylesheet">
-		<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/fonts/rockwell-webfont.ttf" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 
 	</head>
 

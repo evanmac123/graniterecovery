@@ -15,7 +15,7 @@
 						if( get_row_layout() == 'flex-grid' ): ?>
 						<div class="grid-x grid-padding-x grid-margin-y flex-grid">
 							<?php while ( have_rows("simple-content-row") ) : the_row();?>
-								<div class="cell auto">
+								<div class="cell large-auto">
 									<?php echo get_sub_field('content-cell');?>
 								</div>
 							<?php
