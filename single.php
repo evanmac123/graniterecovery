@@ -7,18 +7,39 @@
  */
 
 get_header(); ?>
+<div class="blog">
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', '' ); ?>
-				<?php the_post_navigation(); ?>
-				<?php comments_template(); ?>
-			<?php endwhile; ?>
-		</main>
-		<?php get_sidebar(); ?>
+	<?php
+		ob_start();
+		get_template_part( 'template-parts/featured-image' );
+		$out = ob_get_contents();
+		ob_clean();
+		if ( has_post_thumbnail( $post->ID ) ) : ?>
+			<div class="featured-hero main-container" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'featured-small' ); ?>, small], [<?php the_post_thumbnail_url( 'featured-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'featured-large' ); ?>, large], [<?php the_post_thumbnail_url( 'featured-xlarge' ); ?>, xlarge]">
+		<?php else: ?>
+			<div class="featured-hero" style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
+		<?php endif; ?>
+				<div class="blog-header">
+						<div class="blog-header-breadcrumb">
+									<?php if(function_exists('bcn_display'))
+									{
+											bcn_display();
+									}?>
+						</div>
+						<h1>GRC Blog</h1>
+				</div>
+			</div>
+
+	<div class="main-container">
+		<div class="main-grid">
+			<main class="main-content">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'template-parts/content-single', '' ); ?>
+					<?php the_post_navigation(); ?>
+				<?php endwhile; ?>
+			</main>
+			<?php get_sidebar(); ?>
+		</div>
 	</div>
 </div>
 <?php get_footer();

@@ -312,12 +312,22 @@
 
   .orange{
     //newsletter code is in subscribe
+    h4{
+      @include breakpoint(medium down) {
+      text-align:center;
+    }
+    }
     &-network{
       background-color: $dark-orange;
-      padding: 75px;
+      padding: 100px;
       color: $white;
+      .cell.sponser{
+      @include breakpoint(medium down) {
+        padding: 30px;
+        }
+      }
       .cell{
-        padding-top: 0;
+        padding: 0 30px 30px 30px;
       }
       h4{
         text-transform: uppercase;
@@ -328,6 +338,17 @@
         text-transform: uppercase;
         padding: 15px 8px 8px 8px;
         font-family: $header-font-family;
+      }
+      .button{
+        width: 100%;
+        @include breakpoint(medium down) {
+         margin-top:30px;
+       }
+      }
+    }
+    &-newsletter{
+      padding: 100px;
+      @include breakpoint(medium down) {
 
       }
     }

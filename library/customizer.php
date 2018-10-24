@@ -136,15 +136,11 @@ array(
 'section' => 'main_menu_info',
 'settings' => 'footer_logo',
 ) ) );
-
 }
 
 add_action('customize_register', 'menu_info_customize');
 
-
-
 /////Sidebar
-
 
 function sidebar_options_customize($wp_customize) {
 $wp_customize->add_section('sidebar_options', array(
@@ -158,6 +154,7 @@ $wp_customize->add_setting('sidebar_featured_background', array(
   'default'   => '',
   'transport' => 'refresh',
 ));
+
 // Add a control to upload the logo
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sidebar_featured_background',
 array(
@@ -170,6 +167,7 @@ array(
 $wp_customize->add_setting('sidebar_featured_title', array(
   'default'   => 'Passion. Purpose. Understanding.',
 ));
+
 // Add a control to upload the logo
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_title',
 array(
@@ -208,16 +206,40 @@ $wp_customize->add_setting('sidebar_featured_button_text', array(
   'default'   => 'Meet Our Team',
 ));
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_text', array( 
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_text', array(
 'label' => 'Sidebar Featured Page title',
 'section' => 'sidebar_options',
 'settings' => 'sidebar_featured_button_text',
 ) ) );
-
-
 }
 
 add_action('customize_register', 'sidebar_options_customize');
+
+
+function blog_customize($wp_customize) {
+$wp_customize->add_section('blog_options', array(
+'title' => 'Blog Options',
+'description' => '',
+'priority' => 120,
+));
+
+// add a setting for the sidebar_background
+$wp_customize->add_setting('blog_header_image', array(
+  'default'   => '',
+  'transport' => 'refresh',
+));
+
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'blog_header_image',
+array(
+'label' => 'Blog Header Image',
+'section' => 'blog_options',
+'settings' => 'blog_header_image',
+) ) );
+}
+
+add_action('customize_register', 'blog_customize');
+
 
 /**
   * Set default settings when switching themes
@@ -232,6 +254,5 @@ function my_default_total_settings() {
 	set_theme_mod( 'phone_number', '(866) 237-6140)' );
 	set_theme_mod( 'address', '6 Manor Pkwy, Salem, NH 03079' );
 	set_theme_mod( 'copyright', '© Copyright 2018 Granite Recovery Centers' );
-
 }
 add_action( 'after_switch_theme', 'my_default_total_settings' );

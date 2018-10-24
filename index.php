@@ -14,6 +14,19 @@
  */
 
 get_header(); ?>
+<div class="blog">
+	<div class="featured-hero" style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
+				<div class="blog-header">
+				<div class="blog-header-breadcrumb">
+							<?php if(function_exists('bcn_display'))
+							{
+									bcn_display();
+							}?>
+				</div>
+				<h1>GRC Blog</h1>
+				</div>
+
+	</div>
 
 <div class="main-container">
 	<div class="main-grid">
@@ -46,5 +59,6 @@ get_header(); ?>
 		<?php get_sidebar(); ?>
 
 	</div>
+</div>
 </div>
 <?php get_footer();

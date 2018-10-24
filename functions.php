@@ -56,5 +56,14 @@ require_once( 'library/responsive-images.php' );
 require_once( 'library/customizer.php' );
 
 
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+      );
+    }
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );

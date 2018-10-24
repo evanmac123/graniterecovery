@@ -146,7 +146,7 @@ get_header(); ?>
 				</a>
 			</div>
 		</section>
-		<div class="full reveal" id="video1-<?php echo $i ?>" data-reveal>
+		<div class="medium reveal" id="video1-<?php echo $i ?>" data-reveal>
 			<div class="flex-video">
 					<?php echo $video_embed_1; ?>
 			</div>
@@ -154,7 +154,7 @@ get_header(); ?>
 					<span aria-hidden="true">&times;</span>
 			</button>
 		</div>
-		<div class="full reveal" id="video2-<?php echo $i ?>" data-reveal>
+		<div class="medium reveal" id="video2-<?php echo $i ?>" data-reveal>
 			<div class="flex-video">
 					<?php echo $video_embed_2; ?>
 			</div>
@@ -162,7 +162,7 @@ get_header(); ?>
 					<span aria-hidden="true">&times;</span>
 			</button>
 		</div>
-		<div class="full reveal" id="video3-<?php echo $i ?>" data-reveal>
+		<div class="medium reveal" id="video3-<?php echo $i ?>" data-reveal>
 			<div class="flex-video">
 					<?php echo $video_embed_3; ?>
 			</div>
@@ -176,9 +176,11 @@ get_header(); ?>
 	<?php endif; ?>
 	<section class="orange grid-x grid-padding-x">
 		<div class="orange-newsletter cell large-6">
+			<div class="">
 			<h4> The GRC Newsletter</h4>
 			<p> Sign up for GRC’s free bi-monthly newsletter featuring new perspectives on growth and recovery. </p>
 				<?php es_subbox( $desc = "", $group = "" ); ?>
+			</div>
 		</div>
 		<div class="orange-network cell large-6">
 			<h4>GRC is an In-Network Provider</h4>
@@ -187,13 +189,13 @@ get_header(); ?>
 					$images = get_field('home-network-gallery');
 					if( $images ): ?>
 					<?php foreach( $images as $image ): ?>
-					<div class="cell small-4">
+					<div class="cell sponser medium-6 large-4">
 						<span class="helper"></span>
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div>
 					<?php endforeach; ?>
 					<?php endif; ?>
-					<div class="cell small-4 orange-network-link">
+					<div class="cell medium-6 large-4 orange-network-link">
 						<a class="button" href="<?php the_field("home-network-link"); ?>">
 							Learn More
 						</a>

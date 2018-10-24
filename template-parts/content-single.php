@@ -11,6 +11,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header>
 	<?php
 		if ( is_single() ) {
@@ -22,7 +23,7 @@
 		<?php foundationpress_entry_meta(); ?>
 	</header>
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+		<?php the_content(); ?>
 	</div>
 	<footer>
 		<?php

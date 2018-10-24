@@ -8,39 +8,46 @@
 
 get_header(); ?>
 
-<div class="main-container">
-	<div class="main-grid">
-		<main id="search-results" class="main-content">
+<div class="blog">
+	<div class="featured-hero" style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
+				<div class="blog-header">
+				<h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
+				</div>
+	</div>
+	<div class="main-container">
+		<div class="main-grid">
+			<main id="search-results" class="main-content">
 
-		<header>
-			<h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
-		</header>
+			<header>
 
-		<?php if ( have_posts() ) : ?>
+			</header>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-			<?php endwhile; ?>
+			<?php if ( have_posts() ) : ?>
 
-			<?php else : ?>
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				<?php endwhile; ?>
 
-		<?php endif; ?>
+				<?php else : ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php
-		if ( function_exists( 'foundationpress_pagination' ) ) :
-			foundationpress_pagination();
-		elseif ( is_paged() ) :
-		?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
-		<?php endif; ?>
+			<?php endif; ?>
 
-		</main>
-	<?php get_sidebar(); ?>
+			<?php
+			if ( function_exists( 'foundationpress_pagination' ) ) :
+				foundationpress_pagination();
+			elseif ( is_paged() ) :
+			?>
+				<nav id="post-nav">
+					<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+					<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+				</nav>
+			<?php endif; ?>
 
+			</main>
+		<?php get_sidebar(); ?>
+
+		</div>
 	</div>
 </div>
 <?php get_footer();

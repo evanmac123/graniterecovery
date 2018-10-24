@@ -1,0 +1,52 @@
+.blog{
+
+  &-header {
+    align-self: flex-end;
+    width: 60%;
+    color: $white;
+    z-index:3;
+    @include breakpoint(medium down) {
+      width: 100%;
+    }
+
+    &-breadcrumb {
+      color: white;
+      margin-bottom: 5px;
+      a{
+        padding: 0 5px 0 0;
+        color: $green;
+        font-family: $header-font-family;
+      }
+    }
+  }
+  article{
+    padding: 25px 0;
+    border-bottom: 1px $light-gray solid;
+
+    time{
+      color: $white-gray;
+      padding: 0 0 5px 0px;
+    }
+    .entry-content{
+      margin-top: 6px;
+      .read-more{
+        width:100%;
+        float:left;
+      }
+    }
+    h3, h2{
+      margin-bottom: 0;
+    }
+  }
+  .sidebar h6{
+    margin-bottom: 0;
+  }
+  .widget{
+    ul{
+      margin-left:0;
+    }
+    li{
+      list-style: none;
+    }
+  }
+}

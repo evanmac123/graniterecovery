@@ -9,6 +9,7 @@
     background-size: cover;
     padding: 50px;
     position: relative;
+    z-index: 0;
     &::after {
       content: ""; // ::before and ::after both require content
       position: absolute;

@@ -2,6 +2,26 @@
   @include xy-grid-container;
 }
 
+.reveal{
+  padding:0;
+  border: 0;
+  background-color: transparent;
+}
+
+
+a{
+  color: $light-orange;
+  transition: .4s all;
+  &:hover, &:focus {
+    color: $dark-orange;
+    transition: .4s all;
+  }
+}
+
+.pagination .current{
+  background-color: $light-orange;
+}
+
 .main-grid {
   @include xy-grid();
   margin-top: 1rem;
