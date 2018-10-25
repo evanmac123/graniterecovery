@@ -14,7 +14,7 @@
  */
 
 get_header(); ?>
-<div class="blog">
+<div class="blog index">
 	<div class="featured-hero" style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
 				<div class="blog-header">
 				<div class="blog-header-breadcrumb">
@@ -35,7 +35,7 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				<?php get_template_part( 'template-parts/content-list', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 			<?php else : ?>

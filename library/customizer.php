@@ -216,29 +216,43 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_fe
 add_action('customize_register', 'sidebar_options_customize');
 
 
-function blog_customize($wp_customize) {
-$wp_customize->add_section('blog_options', array(
-'title' => 'Blog Options',
+function blog_events_customize($wp_customize) {
+$wp_customize->add_section('blog_event_options', array(
+'title' => 'Blog & Event Options',
 'description' => '',
 'priority' => 120,
 ));
 
-// add a setting for the sidebar_background
+// add a setting for the blog header
 $wp_customize->add_setting('blog_header_image', array(
   'default'   => '',
   'transport' => 'refresh',
 ));
 
-// Add a control to upload the logo
+// Add a control to blog header image
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'blog_header_image',
 array(
 'label' => 'Blog Header Image',
-'section' => 'blog_options',
+'section' => 'blog_event_options',
 'settings' => 'blog_header_image',
+) ) );
+
+// add a setting for the event_background
+$wp_customize->add_setting('event_header_image', array(
+  'default'   => '',
+  'transport' => 'refresh',
+));
+
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'event_header_image',
+array(
+'label' => 'Event Header Image',
+'section' => 'blog_event_options',
+'settings' => 'event_header_image',
 ) ) );
 }
 
-add_action('customize_register', 'blog_customize');
+add_action('customize_register', 'blog_events_customize');
 
 
 /**

@@ -20,8 +20,22 @@
     }
   }
   article{
-    padding: 25px 0;
+    padding: 0 0 25px 0;
     border-bottom: 1px $light-gray solid;
+    .blog-list-post{
+      .post-featured-image{
+        display: block;
+        background-size: cover;
+        width: 90%;
+        height: 100%;
+        margin-right:10px;
+        @include breakpoint(medium down) {
+          margin-bottom: 20px;
+          height: 120px;
+          width:100%;
+        }
+      }
+    }
 
     time{
       color: $white-gray;
@@ -29,6 +43,7 @@
     }
     .entry-content{
       margin-top: 6px;
+      width: 100%;
       .read-more{
         width:100%;
         float:left;
@@ -37,6 +52,9 @@
     h3, h2{
       margin-bottom: 0;
     }
+  }
+  &.single article{
+    padding:0;
   }
   .sidebar h6{
     margin-bottom: 0;
@@ -48,5 +66,12 @@
     li{
       list-style: none;
     }
+  }
+  .nav-links{
+    padding: 20px 0;
+    margin-bottom: 22px;
+  }
+  .pagination{
+    margin: 2rem;
   }
 }

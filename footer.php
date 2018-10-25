@@ -9,6 +9,8 @@
  */
 ?>
 
+</div>
+
 <footer class="footer">
     <div class="footer-container">
 

@@ -55,6 +55,7 @@ require_once( 'library/responsive-images.php' );
 /** Customize Wordpress settings */
 require_once( 'library/customizer.php' );
 
+require_once( 'library/custom-post-types.php' );
 
 function wpdocs_excerpt_more( $more ) {
     return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',

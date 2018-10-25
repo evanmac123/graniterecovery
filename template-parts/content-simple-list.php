@@ -22,7 +22,7 @@
 		<?php foundationpress_entry_meta(); ?>
 	</header>
 	<div class="entry-content">
-		<?php the_content(); ?>
+		<?php the_excerpt(); ?>
 	</div>
 	<footer>
 		<?php

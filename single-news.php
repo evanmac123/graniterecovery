@@ -26,7 +26,7 @@ get_header(); ?>
 											bcn_display();
 									}?>
 						</div>
-						<h1>GRC Blog</h1>
+						<h1>GRC In The News</h1>
 				</div>
 			</div>
 

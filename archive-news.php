@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying news pages
  *
- * Used to display archive-type pages if nothing more specific matches a query.
+ * Used to display news-type pages if nothing more specific matches a query.
  * For example, puts together date-based pages if no date.php file exists.
  *
  * If you'd like to further customize these archive views, you may create a
@@ -13,10 +13,15 @@
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
+
+ *
+ * Template Post Type: news
  */
 
+
+
 get_header(); ?>
-<div class="blog archive">
+<div class="blog archive-news">
 	<div class="featured-hero " style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
 				<div class="blog-header">
 				<div class="blog-header-breadcrumb">
@@ -25,7 +30,7 @@ get_header(); ?>
 									bcn_display();
 							}?>
 				</div>
-				<h1>GRC Blog: <?php single_cat_title();?></h1>
+				<h1>GRC In The News</h1>
 				</div>
 	</div>
 

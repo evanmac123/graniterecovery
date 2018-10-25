@@ -10,9 +10,13 @@ import Foundation from 'foundation-sites';
 
 $(document).foundation();
 
+$(document).ready(function(e) {
+	$("").css("display", "none");
+
+});
 
 $(window).on("load resize scroll", function(e) {
-	if($(document).scrollTop()>100 || $(window).width() < 960) {
+	if( $(document).scrollTop()>30 || $(window).width() < 1024 || $(window).height() < 600) {
     $(".top-bar").addClass("top-bar-collapsed");
     $(".hamburger-menu").addClass("mobile-menu-collapsed");
 		$(".top-bar-right-menu").addClass("top-bar-right-menu-collapsed");
