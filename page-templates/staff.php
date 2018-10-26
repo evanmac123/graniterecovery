@@ -51,7 +51,7 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content', 'page' ); ?>
 					<?php endwhile; ?>
 					<?php
-					$al_staff_query = "SELECT `ID` FROM `wp_posts` WHERE `post_parent` = '281'";
+					$al_staff_query = "SELECT `ID` FROM `wp_posts` WHERE `post_parent` = '817'";
 					$al_staff_posts = $wpdb->get_results($al_staff_query);
 					foreach ($al_staff_posts as $post_id) {
 							$al_staff_meta = get_post_meta($post_id->ID);

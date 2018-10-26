@@ -88,9 +88,11 @@ body {
       right:0;
       height:85px;
       transition: 0.4s all;
-      @include breakpoint(medium down) {
-        animation: 1s ease-in-out  .8s menufade forwards;
-        opacity: 0;
+        @include breakpoint(medium down) {
+          opacity: 0;
+          &-fade-in{
+            animation: 1s ease-in-out 1s  menufade forwards;
+          }
       }
 
     &-title{

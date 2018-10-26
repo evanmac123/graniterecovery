@@ -16,13 +16,14 @@ $(document).ready(function(e) {
 });
 
 $(window).on("load resize scroll", function(e) {
-	if( $(document).scrollTop()>30 || $(window).width() < 1024 || $(window).height() < 600) {
+	if( $(window).scrollTop()>30 || $(window).width() < 1024 || $(window).height() < 600) {
     $(".top-bar").addClass("top-bar-collapsed");
     $(".hamburger-menu").addClass("mobile-menu-collapsed");
 		$(".top-bar-right-menu").addClass("top-bar-right-menu-collapsed");
     $(".top-bar-right-menu-number").addClass("top-bar-right-number-collapsed");
     $(".top-bar-right-share").addClass("top-bar-right-share-collapsed");
     $(".top-bar-right-search").addClass("top-bar-right-search-collapsed");
+		$(".top-bar").addClass("top-bar-fade-in");
 	} else {
     $(".top-bar").removeClass("top-bar-collapsed");
 		$(".top-bar-right-menu").removeClass("top-bar-right-menu-collapsed");
