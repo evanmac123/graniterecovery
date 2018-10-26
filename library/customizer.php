@@ -207,7 +207,7 @@ $wp_customize->add_setting('sidebar_featured_button_text', array(
 ));
 // Add a control to upload the logo
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_text', array(
-'label' => 'Sidebar Featured Page title',
+'label' => 'Sidebar Featured Page Text',
 'section' => 'sidebar_options',
 'settings' => 'sidebar_featured_button_text',
 ) ) );

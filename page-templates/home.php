@@ -112,7 +112,7 @@ get_header(); ?>
 							<?php echo $video_author_position_1; ?>
 						</div>
 					</div>
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
+					<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/play.svg">
 				</a>
 			</div>
 			<div class="home-video-cell cell large-4 video-section-2">

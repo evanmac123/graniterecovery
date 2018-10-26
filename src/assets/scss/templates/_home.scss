@@ -61,6 +61,7 @@
       height: 400px;
       width: 100%;
       background-size: cover;
+      background-position: center;
 
       &-logo {
         img {
@@ -114,7 +115,8 @@
         position: relative;
         text-align: center;
         min-height: 400px;
-        background-image: cover;
+        background-size: cover;
+        background-position: center;
         border-bottom: 1px solid #ffc4c4;
         @include breakpoint(medium down) {
           min-height: 300px;
@@ -222,6 +224,7 @@
 
     a {
       background-size: cover;
+      background-position: center;
       display: flex;
       color: white;
       position: relative;
@@ -239,13 +242,13 @@
         background-color: $black;
         z-index: 1;
         mix-blend-mode: darken;
-        opacity: 0.5;
+        opacity: 0.3;
         transition: all 0.4s ease-in-out;
       }
 
       &:hover {
         &::after {
-          opacity: 0.8;
+          opacity: 0.0;
           transition: 0.4s all ease-in-out;
         }
       }
@@ -310,57 +313,64 @@
     }
   }
 
-  .orange{
+  .orange {
     //newsletter code is in subscribe
-    h4{
+    h4 {
       @include breakpoint(medium down) {
-      text-align:center;
+        text-align: center;
+      }
     }
-    }
-    &-network{
+
+    &-network {
       background-color: $dark-orange;
       padding: 100px;
       color: $white;
-      .cell.sponser{
-      @include breakpoint(medium down) {
-        padding: 30px;
+
+      .cell.sponser {
+        @include breakpoint(medium down) {
+          padding: 30px;
         }
       }
-      .cell{
-        padding: 0 30px 30px 30px;
+
+      .cell {
+        padding: 0 30px 30px;
       }
-      h4{
+
+      h4 {
         text-transform: uppercase;
       }
-      a{
+
+      a {
         background-color: #fd611d;
         color: white;
         text-transform: uppercase;
-        padding: 15px 8px 8px 8px;
+        padding: 15px 8px 8px;
         font-family: $header-font-family;
       }
-      .button{
+
+      .button {
         width: 100%;
         @include breakpoint(medium down) {
-         margin-top:30px;
-       }
+          margin-top: 30px;
+        }
       }
     }
-    &-newsletter{
-      padding: 100px;
-      @include breakpoint(medium down) {
 
-      }
+    &-newsletter {
+      padding: 100px;
+      @include breakpoint(medium down) {}
     }
   }
 
-  &-team{
+  &-team {
     padding: 150px 0;
-    text-align:center;
+    text-align: center;
     color: white;
     min-height: 300px;
-    background-size:cover;
-    position:relative;
+    background-size: cover;
+    background-position: center;
+    background-position: center;
+    position: relative;
     justify-content: center;
 
     &::after {
@@ -375,17 +385,19 @@
       opacity: 0.6;
       transition: all 0.4s ease-in-out;
     }
-    &-content{
+
+    &-content {
       z-index: 3;
-      position:relative;
+      position: relative;
     }
-    a{
+
+    a {
       text-transform: uppercase;
       background-color: $light-green;
       color: white;
       text-transform: uppercase;
-      padding: 15px 15px 8px 15px;
+      padding: 15px 15px 8px;
       font-family: $header-font-family;
     }
-}
+  }
 }
