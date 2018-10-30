@@ -113,6 +113,7 @@ $white-gray: #999999;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
+$gray:#666666;
 $black: #191919;
 $white: #fefefe;
 $red: #dc2c28;
@@ -181,7 +182,7 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.2;
-$header-margin-bottom: 2rem;
+$header-margin-bottom: .3rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),

@@ -4,9 +4,7 @@
     <title>ion-chevron-right - Ionicons</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Ionicons" font-size="20" font-weight="400">
-        <text id="ion-chevron-right---Ionicons" fill="#94B10D">
-            <tspan x="0" y="17"></tspan>
-        </text>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6.640625,9.5 L0.1171875,2.703125 C-0.091146875,2.49479063 -0.091146875,2.28645937 0.1171875,2.078125 L1.2890625,0.90625 C1.52343867,0.697915625 1.73176992,0.684894922 1.9140625,0.8671875 L9.8828125,9.1875 C9.96093789,9.26562539 10,9.36979102 10,9.5 C10,9.63020898 9.96093789,9.73437461 9.8828125,9.8125 L1.9140625,18.1328125 C1.70572812,18.3411469 1.49739688,18.3411469 1.2890625,18.1328125 L0.1171875,16.921875 C-0.091146875,16.7135406 -0.091146875,16.5052094 0.1171875,16.296875 L6.640625,9.5 Z" id="ion-chevron-right---Ionicons" fill="#94B10D"></path>
     </g>
 </svg>

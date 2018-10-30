@@ -56,7 +56,7 @@
      'description'         => __( 'New news' ),
      'labels'              => $newlabels,
      // Features this CPT supports in Post Editor
-     'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+     'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail','custom-fields', 'revisions', 'custom-fields', ),
      // You can associate this CPT with a taxonomy or custom taxonomy.
      'taxonomies'          => array( 'genres' ),
      /* A hierarchical CPT is like Pages and can have

@@ -180,7 +180,7 @@
           }
 
           &::after {
-            opacity: 1;
+
             background-color: $black;
             transition: all 0.4s ease-in-out;
           }
@@ -274,7 +274,6 @@
     }
 
     &-cell-title {
-      margin-bottom: 10px;
       font-weight: 700;
       font-size: 3.5rem;
       line-height: 1;
@@ -323,7 +322,10 @@
 
     &-network {
       background-color: $dark-orange;
-      padding: 100px;
+      padding:100px;
+      @include breakpoint(medium down) {
+        padding: 70px 70px;
+      }
       color: $white;
 
       .cell.sponser {
@@ -333,7 +335,7 @@
       }
 
       .cell {
-        padding: 0 30px 30px;
+        padding: 25px 30px 15px 30px;
       }
 
       h4 {
@@ -350,16 +352,20 @@
 
       .button {
         width: 100%;
-        @include breakpoint(medium down) {
-          margin-top: 30px;
-        }
       }
     }
 
     &-newsletter {
       padding: 100px;
-      @include breakpoint(medium down) {}
+      @include breakpoint(medium down) {
+       padding: 70px 70px;
+      }
     }
+    .es_textbox{
+      @include breakpoint(medium down) {
+        width: auto;
+      }
+     }
   }
 
   &-team {
@@ -389,6 +395,9 @@
     &-content {
       z-index: 3;
       position: relative;
+      @include breakpoint(medium down) {
+       padding: 0px 20px;
+      }
     }
 
     a {
@@ -398,6 +407,120 @@
       text-transform: uppercase;
       padding: 15px 15px 8px;
       font-family: $header-font-family;
+    }
+  }
+  .home-white-block{
+    margin: 50px;
+    letter-spacing: -0.5px;
+    h4{
+      text-transform: uppercase;
+      color: $black;
+      float:left;
+      font-size: 1.25rem;
+    }
+    .seen{
+      .block-title{
+        width:100%;
+      }
+      .icon{
+      margin: 0px 10px 0 0;
+      float:left;
+      }
+    }
+    .logos{
+      margin-top: 20px;
+      margin-left:0;
+      float:left;
+      @include breakpoint(medium down) {
+        padding-bottom: 20px;
+      }
+      .logo{
+        padding: 0 40px 40px 0;
+        @include breakpoint(medium up) {
+          padding: 0px 40px 65px 0;
+        }
+      }
+    }
+    .news{
+      .news-list{
+        margin: 40px 0 0 0;
+        @include breakpoint(medium down) {
+          margin: 40px 0 0 0;
+        }
+      }
+      .news-post{
+        float: left;
+        border-bottom: 1px solid $light-gray;
+        padding: 0px 0 20px 0;
+        font-size: 16px;
+        margin-bottom: 20px;
+        width:100%;
+        .news-time{
+          font-size: 12px;
+          color: #666666;
+        }
+        .news-title{
+          color: #333333;
+          &:hover{
+            color: $light-orange;
+          }
+        }
+        .news-publisher{
+          color: #666666;
+          font-style: italic;
+        }
+      }
+    .more-news{
+      color: $red;
+      float:left;
+      width:100%;
+    }
+
+      .icon{
+        padding: 0px 10px 0 0;
+        float:left;
+      }
+    }
+    .events{
+      @include breakpoint(medium) {
+        padding-right: 20px;
+      }
+      @include breakpoint(small down) {
+        padding-right: 20px;
+        margin-bottom: 40px;
+      }
+      .event-list{
+        margin: 40px 0 0 0;
+        @include breakpoint(medium down) {
+          margin: 40px 0 0 0;
+          padding-right: 0px;
+        }
+        padding-right: 30px;
+      }
+      .event-post{
+        border-bottom: 1px solid $light-gray;
+        padding: 0px 0 20px 0;
+        font-size: 16px;
+        margin-bottom: 20px;
+        .event-title{
+          color: #333333;
+          &:hover{
+            color: $light-orange;
+          }
+        }
+        .event-time{
+          color: #666666;
+          font-style: italic;
+        }
+      }
+      .icon{
+        padding: 0px 10px 0 0;
+        float:left;
+      }
+      .more-events{
+        color:  $red;
+        float:left;
+      }
     }
   }
 }

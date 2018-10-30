@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="5px" height="11px" viewBox="0 0 5 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>ion-arrow-right-b - Ionicons</title>
+    <title>ion-android-arrow-dropright - Ionicons</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Ionicons" font-size="20" font-weight="400">
-        <text id="ion-arrow-right-b---Ionicons" fill="#FFFFFF">
-            <tspan x="0" y="14"></tspan>
-        </text>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="ion-android-arrow-dropright---Ionicons" fill="#FFFFFF" points="0 0.5 5 5.5 0 10.5"></polygon>
     </g>
 </svg>

@@ -13,8 +13,29 @@ a{
   color: $light-orange;
   transition: .4s all;
   &:hover, &:focus {
-    color: $dark-orange;
+    color: $green;
     transition: .4s all;
+  }
+}
+
+.body-content{
+  .main-container{
+    h1,h2,h3,h4,h5,h6{
+      margin-top: 1.2rem;
+      margin-bottom: 0rem;
+    }
+    h2{
+      color: #DC2c28; //red
+    }
+    h3{
+      color: #F38118; //orange
+    }
+    h4,h5{
+      color: #454545; //black
+    }
+  }
+  iframe{
+    width:100%;
   }
 }
 
