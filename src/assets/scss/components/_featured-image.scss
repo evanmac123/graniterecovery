@@ -5,9 +5,9 @@
   height: rem-calc(300);
   display:flex;
   position:relative;
-  padding: 0 80px;
+  padding: 0 80px 40px 80px;
   @include breakpoint(small down) {
-    padding: 0 20px;
+    padding: 20px 20px;
   }
   &::after {
     content: ""; // ::before and ::after both require content

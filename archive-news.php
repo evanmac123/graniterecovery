@@ -62,7 +62,10 @@ get_header(); ?>
 			<?php endif; ?>
 
 		</main>
-		<?php get_sidebar(); ?>
+		<aside class="sidebar">
+			<?php dynamic_sidebar( 'sidebar-news-widgets' ); ?>
+		</aside>
+
 
 	</div>
 </div>

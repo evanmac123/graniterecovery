@@ -101,12 +101,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      &-container {}
-
-      h1 {
-        margin-bottom: 0;
-      }
     }
 
     &-location {
@@ -431,8 +425,10 @@
       margin-top: 20px;
       margin-left:0;
       float:left;
+      margin-right: 30px;
       @include breakpoint(medium down) {
         padding-bottom: 20px;
+        margin-right: 0;
       }
       .logo{
         padding: 0 40px 40px 0;

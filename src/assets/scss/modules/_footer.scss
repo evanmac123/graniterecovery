@@ -12,6 +12,11 @@
           font-family: $header-font-family;
           color:$green;
           font-size:15px;
+          transition: all .4s;
+          &:hover{
+            transition: all .4s;
+            color: $red;
+          }
         }
       }
     }

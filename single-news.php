@@ -38,7 +38,10 @@ get_header(); ?>
 					<?php the_post_navigation(); ?>
 				<?php endwhile; ?>
 			</main>
-			<?php get_sidebar(); ?>
+			<aside class="sidebar">
+				<?php dynamic_sidebar( 'news-sidebar-widgets' ); ?>
+			</aside>
+
 		</div>
 	</div>
 </div>
