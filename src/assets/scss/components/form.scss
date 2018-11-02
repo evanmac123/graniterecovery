@@ -47,6 +47,7 @@ footer{
     .submit-wrap input{
       color: $white;
       border: 2px solid red;
+      background-color: transparent;
       &:hover{
         background-color: $white;
         color: $red;
@@ -122,8 +123,16 @@ footer{
       .ctct-button{
         display: none;
       }
+      .ctct-form-wrapper .success{
+        color: white;
+        font-weight: bold;
+        border: 2px solid $green;
+      }
       .ctct-form label{
         color:white;
+      }
+      .ctct-form-wrapper input[type="email"]{
+        background-color:transparent !important;
       }
       .ctct-form-field-submit {
         width: 25%;
@@ -145,11 +154,3 @@ footer{
       }
     }
   }
-
-@media only screen and (max-width: 800px) {
-  .footer{
-    .nf-form-cont{
-      margin-top: 30px;
-    }
-  }
-}

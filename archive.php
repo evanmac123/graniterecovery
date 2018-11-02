@@ -57,7 +57,6 @@ get_header(); ?>
 			<?php endif; ?>
 
 		</main>
-		Hello
 		<?php get_sidebar(); ?>
 
 	</div>

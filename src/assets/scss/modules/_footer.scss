@@ -90,6 +90,9 @@
     @include breakpoint(large) {
       @include xy-cell(auto);
     }
+    @include breakpoint(medium down) {
+      margin-bottom: 2rem;
+    }
   }
 
   ul {

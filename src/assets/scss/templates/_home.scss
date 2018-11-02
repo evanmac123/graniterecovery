@@ -108,10 +108,10 @@
         color: white;
         position: relative;
         text-align: center;
-        min-height: 400px;
+        min-height: 500px;
         background-size: cover;
         background-position: center;
-        border-bottom: 1px solid #ffc4c4;
+        border-bottom: 0;
         @include breakpoint(medium down) {
           min-height: 300px;
         }

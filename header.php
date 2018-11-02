@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<div class="top-bar-right">
-				<form role="search" method="get" id="searchform" class="top-bar-right-search" action="//graniterecovery.com/">
+				<form role="search" method="get" id="searchform" class="top-bar-right-search" action="//graniterecoverycenters.com/">
 					<div class="input-group">
 						<div class="search-icon">
 							<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/search.svg">

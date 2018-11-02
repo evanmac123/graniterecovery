@@ -178,9 +178,9 @@ get_header(); ?>
 		<div class="orange-newsletter cell large-6">
 			<h4> The GRC Newsletter</h4>
 			<?php
-				$shortcode = get_field('home-newsletter-shortcode');
-				echo do_shortcode( $shortcode ); ?>
-					<?php// es_subbox( $desc = "", $group = "" ); ?>
+			$shortcode = get_theme_mod( 'newsletter_shortcode' ); 
+			echo do_shortcode( $shortcode );
+			?>
 		</div>
 		<div class="orange-network cell large-6">
 			<h4>GRC is an In-Network Provider</h4>
@@ -229,10 +229,10 @@ get_header(); ?>
 					$images = get_field('home-seen-gallery');
 					if( $images ): ?>
 					<?php foreach( $images as $image ): ?>
-					<div class="cell large-4 medium-3 small-6 logo">
+					<a href="<?php echo $image['link']; ?>" class="cell large-4 medium-3 small-6 logo">
 						<span class="helper"></span>
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					</div>
+					</a>
 					<?php endforeach; ?>
 					<?php endif; ?>
 				</div>

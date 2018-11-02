@@ -24,8 +24,10 @@ get_header(); ?>
 				<div class="orange">
 				<div class="orange-newsletter">
 					<h4> The GRC Newsletter</h4>
-					<p> Sign up for GRC’s free bi-monthly newsletter featuring new perspectives on growth and recovery. </p>
-						<?php es_subbox( $desc = "", $group = "" ); ?>
+					<?php
+					$shortcode = get_theme_mod( 'newsletter_shortcode' );
+						echo do_shortcode( $shortcode ); 
+					?>
 				</div>
 			</div>
 			<section  class="home-team grid-x" style="background-image:url('<?php echo get_theme_mod( 'sidebar_featured_background' ); ?>');">

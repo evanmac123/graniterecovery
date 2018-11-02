@@ -10,6 +10,10 @@
     padding: 50px;
     position: relative;
     z-index: 0;
+    background-position: center;
+    @include breakpoint(medium down) {
+      height: 300px;
+    }
     &::after {
       content: ""; // ::before and ::after both require content
       position: absolute;
@@ -19,7 +23,7 @@
       height: 100%;
       background-color: $black;
       z-index: 1;
-      opacity: 0.5;
+      opacity: 0.6;
       mix-blend-mode: multiply;
       transition: all 0.4s ease-in-out;
     }
@@ -61,6 +65,9 @@
 
   &-main {
     background-color: $white;
+    @include breakpoint(medium down) {
+      margin-top: 1rem;
+    }
   }
 
   &-bar {
@@ -146,11 +153,13 @@
       &-newsletter{
         padding: 50px;
         min-height: 430px;
-        .es_textbox{
+        .ctct-form-field-email{
           width: 100%;
         }
-        .es_button{
-          margin-left:0;
+       .ctct-form-field-submit{
+          margin:0;
+          margin-top: -30px;
+          width: auto;
         }
       }
     }

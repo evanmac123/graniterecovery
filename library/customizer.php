@@ -140,6 +140,32 @@ array(
 
 add_action('customize_register', 'menu_info_customize');
 
+// Newsletter
+function newsletter_customize($wp_customize) {
+$wp_customize->add_section('newsletter_options', array(
+'title' => 'Newsletter Options',
+'description' => '',
+'priority' => 120,
+));
+
+// add a setting for the sidebar_background
+$wp_customize->add_setting('newsletter_shortcode', array(
+  'default'   => '',
+  'transport' => 'refresh',
+));
+
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'newsletter_shortcode',
+array(
+'label' => 'Newsletter Shortcode',
+'section' => 'newsletter_options',
+'settings' => 'newsletter_shortcode',
+) ) );
+}
+
+add_action('customize_register', 'newsletter_customize');
+
+
 /////Sidebar
 
 function sidebar_options_customize($wp_customize) {
