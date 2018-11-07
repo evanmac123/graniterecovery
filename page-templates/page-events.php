@@ -4,7 +4,12 @@ Template Name: Event Page
 */
 get_header(); ?>
 <div class="event blog">
-	<div class="featured-hero" style="background-image:url('<?php echo get_theme_mod( 'event_header_image' ); ?>">
+	<?php if ( get_theme_mod( 'events_header_image' ) ) { ?>
+	<div class="featured-hero events-featured-header" style="background-image:url('<?php echo get_theme_mod( 'event_header_image' ); ?>">
+	<?php }
+	else { ?>
+		<div class="featured-hero events-featured-header">
+	<?php } ?>
 				<div class="blog-header">
 				<div class="blog-header-breadcrumb">
 							<?php if(function_exists('bcn_display'))

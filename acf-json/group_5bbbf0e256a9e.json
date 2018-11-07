@@ -185,10 +185,18 @@
                     "type": "url",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "",
+                                "operator": "==",
+                                "value": ""
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
-                        "class": "",
+                        "class": "http:\/\/www.google.com",
                         "id": ""
                     },
                     "default_value": "",
@@ -240,7 +248,7 @@
                     "name": "video-embed-1",
                     "type": "oembed",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -313,9 +321,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5bbd55a0015a9",
-                    "label": "video-author-position-1",
-                    "name": "video-author-position-1",
+                    "key": "field_5be0c22abb376",
+                    "label": "video-author-position-1 (copy)",
+                    "name": "video-author-position-1_copy",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -621,7 +629,15 @@
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "",
+                        "operator": "==",
+                        "value": ""
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -714,6 +730,67 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5be0c0284d1f7",
+            "label": "home-news-images",
+            "name": "home-news-images",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add News Link",
+            "sub_fields": [
+                {
+                    "key": "field_5be0c0484d1f8",
+                    "label": "news-logo",
+                    "name": "news-logo",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "32",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5be0c1424f93c",
+                    "label": "news-url",
+                    "name": "news-url",
+                    "type": "url",
+                    "instructions": "Include the link to the story",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -743,5 +820,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1541014829
+    "modified": 1541457079
 }

@@ -6,7 +6,7 @@ get_header(); ?>
 
 <div class="home">
 	<section class="home-slider">
-		<h1 style="display:none;">Granite Recovery Center</h1>
+		<h1 style="display:none;">Granite Recovery Centers</h1>
 		<div class="hide-for-small-only">
 			<?php the_field("home-slider"); ?>
 		</div>
@@ -178,7 +178,7 @@ get_header(); ?>
 		<div class="orange-newsletter cell large-6">
 			<h4> The GRC Newsletter</h4>
 			<?php
-			$shortcode = get_theme_mod( 'newsletter_shortcode' ); 
+			$shortcode = get_theme_mod( 'newsletter_shortcode' );
 			echo do_shortcode( $shortcode );
 			?>
 		</div>
@@ -225,16 +225,14 @@ get_header(); ?>
 					</h4>
 				</div>
 				<div class="grid-x flex-container logos">
-				<?php
-					$images = get_field('home-seen-gallery');
-					if( $images ): ?>
-					<?php foreach( $images as $image ): ?>
-					<a href="<?php echo $image['link']; ?>" class="cell large-4 medium-3 small-6 logo">
-						<span class="helper"></span>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					</a>
-					<?php endforeach; ?>
-					<?php endif; ?>
+					<?php if( have_rows('home-news-images') ):
+					  while( have_rows('home-news-images') ): the_row();
+						?>
+						<a href="<?php echo get_sub_field('news-url'); ?>" class="cell large-4 medium-3 small-6 logo">
+							<img src="<?php echo get_sub_field('news-logo'); ?>"  />
+						</a>
+					<?php	endwhile; ?>
+				<?php endif; ?>
 				</div>
 			</div>
 		</div>

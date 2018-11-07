@@ -17,7 +17,14 @@
         <div class="footer-grid">
           <section class="footer-info">
             <div class="footer-info-title">
-              <?php bloginfo( 'name' ); ?>
+              <?php
+               if ( get_theme_mod( 'header_logo' ) ) { ?>
+                    <img class="custom-logo" src="<?php echo get_theme_mod( 'header_logo' ); ?>">
+                  <?php
+                    }
+               else { ?>
+                    <img alt="Granite Recovery" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" class="custom-logo"/>
+                <?php } ?>
             </div>
             <div class="footer-info-address">
               <?php if ( get_theme_mod( 'address' ) ) : ?>
@@ -56,8 +63,17 @@
           <div>
           </div>
             <div class="footer-info-logo">
-              <?php if ( get_theme_mod( 'footer_logo' ) ) : ?>
-                <img src="<?php echo get_theme_mod( 'footer_logo' ); ?>">
+              <?php if ( get_theme_mod( 'footer_logo_1' ) ) : ?>
+                <img src="<?php echo get_theme_mod( 'footer_logo_1' ); ?>">
+              <?php else: ?>
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/CARF-logo.png">
+              <?php endif; ?>
+            </div>
+            <div class="footer-info-logo">
+              <?php if ( get_theme_mod( 'footer_logo_2' ) ) : ?>
+                <img src="<?php echo get_theme_mod( 'footer_logo_2' ); ?>">
+              <?php else: ?>
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/naatp-logo.png">
               <?php endif; ?>
             </div>
             <div class="footer-info-copyright">
@@ -80,5 +96,6 @@
 <script id="__bs_script__">//<![CDATA[
   //  document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));
 //]]></script>
+<script type="text/javascript" src="//cdn.callrail.com/companies/375093248/25b0e927b24965b0b059/12/swap.js"></script>
 </body>
 </html>

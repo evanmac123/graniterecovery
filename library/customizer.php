@@ -26,6 +26,16 @@ array(
 'settings' => 'header_logo',
 ) ) );
 
+// add a setting for the site logo
+$wp_customize->add_setting('mobile_header_logo');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mobile_header_logo',
+array(
+'label' => 'Mobile Header Logo',
+'section' => 'main_menu_info',
+'settings' => 'mobile_header_logo',
+) ) );
+
 
 // add a setting for the socail-link
 $wp_customize->add_setting('facebook_link', array(
@@ -128,13 +138,24 @@ array(
 ) ) );
 
 // add a setting for the site logo
-$wp_customize->add_setting('footer_logo');
+$wp_customize->add_setting('footer_logo_1');
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_logo',
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_logo_1',
 array(
-'label' => 'Footer Logo',
+'label' => 'Footer Logo 1',
 'section' => 'main_menu_info',
-'settings' => 'footer_logo',
+'settings' => 'footer_logo_1',
+) ) );
+
+
+// add a setting for the site logo
+$wp_customize->add_setting('footer_logo_2');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_logo_2',
+array(
+'label' => 'Footer Logo 2',
+'section' => 'main_menu_info',
+'settings' => 'footer_logo_2',
 ) ) );
 }
 
@@ -287,11 +308,11 @@ add_action('customize_register', 'blog_events_customize');
   */
 function my_default_total_settings() {
 
-	set_theme_mod( 'facebook_link', 'www.google.com' );
-	set_theme_mod( 'instagram_link', 'www.google.com' );
-	set_theme_mod( 'pinterest_link', 'www.google.com' );
-	set_theme_mod( 'youtube_link', 'www.google.com' );
-	set_theme_mod( 'phone_number', '(866) 237-6140)' );
+	set_theme_mod( 'facebook_link', ' https://www.facebook.com/Graniterecoverycenters/' );
+	set_theme_mod( 'instagram_link', 'https://www.instagram.com/graniterecoverycenters/' );
+	set_theme_mod( 'pinterest_link', 'https://www.pinterest.com/graniterecoverycenters/' );
+	set_theme_mod( 'youtube_link', ' https://www.youtube.com/channel/UCuQ8U-TV_ylSgqb5r5Kit6w' );
+	set_theme_mod( 'phone_number', '603-339-4160' );
 	set_theme_mod( 'address', '6 Manor Pkwy, Salem, NH 03079' );
 	set_theme_mod( 'copyright', '© Copyright 2018 Granite Recovery Centers' );
 }

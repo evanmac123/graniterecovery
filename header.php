@@ -38,7 +38,7 @@
 						 else { ?>
 									<img alt="Granite Recovery" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" class="custom-logo"/>
 							<?php } ?>
-							</a>
+					</a>
 							<button class="responsive menu-icon" aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>"  type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>">
 									<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/menu.svg">
 							</button>
@@ -82,6 +82,17 @@
 					</div>
 				</div>
 				<div class="top-bar-right-menu">
+					<a class="show-for-small-only mobile-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<?php
+						// Display the Custom Logo, default logo, or the site's name
+						if ( get_theme_mod( 'mobile_header_logo' ) ) { ?>
+
+									<img class="custom-mobile-logo" src="<?php echo get_theme_mod( 'mobile_header_logo' ); ?>">
+					 <?php	}
+					 else{ ?>
+									<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/mobile-logo.png"/>
+							<?php } ?>
+					</a>
 					<div class="top-bar-right-menu-number">
 							<?php if ( get_theme_mod( 'phone_number' ) ) : ?>
 						<?php echo get_theme_mod( 'phone_number' ); ?>
