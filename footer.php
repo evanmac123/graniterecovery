@@ -69,7 +69,7 @@
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/CARF-logo.png">
               <?php endif; ?>
             </div>
-            <div class="footer-info-logo">
+            <div class="footer-info-logo naatp">
               <?php if ( get_theme_mod( 'footer_logo_2' ) ) : ?>
                 <img src="<?php echo get_theme_mod( 'footer_logo_2' ); ?>">
               <?php else: ?>

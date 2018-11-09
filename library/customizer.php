@@ -315,5 +315,6 @@ function my_default_total_settings() {
 	set_theme_mod( 'phone_number', '603-339-4160' );
 	set_theme_mod( 'address', '6 Manor Pkwy, Salem, NH 03079' );
 	set_theme_mod( 'copyright', '© Copyright 2018 Granite Recovery Centers' );
+	set_theme_mod( 'newsletter_shortcode', '[ctct form="1199"]' );
 }
 add_action( 'after_switch_theme', 'my_default_total_settings' );

@@ -178,7 +178,14 @@ get_header(); ?>
 		<div class="orange-newsletter cell large-6">
 			<h4> The GRC Newsletter</h4>
 			<?php
-			$shortcode = get_theme_mod( 'newsletter_shortcode' );
+			if ( get_field('home-newsletter-shortcode') ) {
+				$shortcode = get_field( 'home-newsletter-shortcode' );
+			}
+			else{
+				$shortcode = get_theme_mod( 'newsletter_shortcode' );
+			}
+
+
 			echo do_shortcode( $shortcode );
 			?>
 		</div>

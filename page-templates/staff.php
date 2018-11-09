@@ -17,31 +17,7 @@ get_header(); ?>
 	</header>
 	<div class="grid-x"  data-equalizer data-equalize-on="medium">
 	<div class="side-bar large-3 cell">
-		<section>
-				<div>
-					<?php foundationpress_left_nav(); ?>
-				</div>
-				<div class="orange">
-				<div class="orange-newsletter">
-					<h4> The GRC Newsletter</h4>
-					<p> Sign up for GRC’s free bi-monthly newsletter featuring new perspectives on growth and recovery. </p>
-						<?php es_subbox( $desc = "", $group = "" ); ?>
-				</div>
-			</div>
-			<section  class="home-team grid-x" style="background-image:url('<?php echo get_theme_mod( 'sidebar_featured_background' ); ?>');">
-				<div class="home-team-content cell 6 large-6 ">
-				<h3>
-					<?php echo get_theme_mod( 'sidebar_featured_title' ); ?>
-				</h3>
-				<p>
-					<?php echo get_theme_mod( 'sidebar_featured_paragraph' ); ?>
-				</p>
-				<a class="button" href="<?php echo get_theme_mod( 'sidebar_featured_button_link' ); ?>">
-					 <?php echo get_theme_mod( 'sidebar_featured_button_text' ); ?>
-				</a>
-			</div>
-		</section>
-		</section>
+		<?php get_template_part( 'template-parts/sidebar-left-content'); ?>
  </div>
 	<div class="side-main medium-12 large-9 cell">
 		<div class="main-container">

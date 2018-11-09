@@ -17,8 +17,13 @@
 
 get_header(); ?>
 <div class="blog archive">
-	<div class="featured-hero " style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
-				<div class="blog-header">
+	<?php if ( get_theme_mod( 'blog_header_image' ) ) { ?>
+	<div class="featured-hero blog-featured-header" style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>');">
+	<?php }
+	else { ?>
+		<div class="featured-hero blog-featured-header">
+	<?php } ?>
+		<div class="blog-header">
 				<div class="blog-header-breadcrumb">
 							<?php if(function_exists('bcn_display'))
 							{
