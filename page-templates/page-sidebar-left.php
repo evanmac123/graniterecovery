@@ -4,7 +4,7 @@ Template Name: Left Sidebar
 */
 get_header(); ?>
 <div class="side">
-	<header style="background-image:url('<?php the_field(" left-sidebar-header-image"); ?>');">
+	<header class="cat" style="background-image:url('<?php the_field("left-sidebar-header-image"); ?>');">
 		<div class="side-header">
 			<div class="side-header-breadcrumb">
 				<?php if(function_exists('bcn_display'))
