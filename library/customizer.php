@@ -284,6 +284,20 @@ array(
 'settings' => 'blog_header_image',
 ) ) );
 
+// add a setting for the blog header
+$wp_customize->add_setting('blog_list_image', array(
+  'default'   => '',
+  'transport' => 'refresh',
+));
+
+// Add a control to blog header image
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'blog_list_image',
+array(
+'label' => 'Blog List Thumbnail Image',
+'section' => 'blog_event_options',
+'settings' => 'blog_list_image',
+) ) );
+
 // add a setting for the event_background
 $wp_customize->add_setting('event_header_image', array(
   'default'   => '',

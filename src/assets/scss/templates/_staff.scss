@@ -26,6 +26,7 @@
     overflow: hidden;
     object-fit: cover;
     display: inherit !important;
+
     @include breakpoint(medium up) {
       max-width: 250px !important;
     }
@@ -45,6 +46,10 @@
 }
  .reveal.staff-bio img {
   padding: 0px 25px 25px 0;
+  width: 30%;
+  @include breakpoint(small down) {
+    width: 100%;
+  }
 }
  .reveal.staff-bio .name {
   padding-bottom: 0;

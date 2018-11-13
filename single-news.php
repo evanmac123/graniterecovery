@@ -17,7 +17,7 @@ get_header(); ?>
 		if ( has_post_thumbnail( $post->ID ) ) : ?>
 			<div class="featured-hero main-container" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'featured-small' ); ?>, small], [<?php the_post_thumbnail_url( 'featured-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'featured-large' ); ?>, large], [<?php the_post_thumbnail_url( 'featured-xlarge' ); ?>, xlarge]">
 		<?php else: ?>
-			<div class="featured-hero" style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
+			<div class="featured-hero news-featured-header">
 		<?php endif; ?>
 				<div class="blog-header">
 						<div class="blog-header-breadcrumb">

@@ -465,17 +465,21 @@ body {
     .mobile-logo{
       width: 60px;
       height: 60px;
-      margin-left:16px;
+      margin-left: 16px;
       float:left;
     }
 
     .top-bar-right-number-collapsed {
-      padding: 16px;
+      padding-top: 17px;
       font-size: 22px;
       transition: 0.4s all;
       width: auto;
+      height: 120px;
       @include breakpoint(small down) {
         margin-left: 90px;
+        padding:0;
+        padding-top: 20px;
+        font-size: 18px;
       }
     }
   }

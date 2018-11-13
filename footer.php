@@ -16,7 +16,7 @@
 
         <div class="footer-grid">
           <section class="footer-info">
-            <div class="footer-info-title">
+            <a  href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer-info-title">
               <?php
                if ( get_theme_mod( 'header_logo' ) ) { ?>
                     <img class="custom-logo" src="<?php echo get_theme_mod( 'header_logo' ); ?>">
@@ -25,7 +25,7 @@
                else { ?>
                     <img alt="Granite Recovery" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" class="custom-logo"/>
                 <?php } ?>
-            </div>
+            </a>
             <div class="footer-info-address">
               <?php if ( get_theme_mod( 'address' ) ) : ?>
                 <?php echo get_theme_mod( 'address' ); ?>

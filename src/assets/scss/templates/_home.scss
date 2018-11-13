@@ -33,7 +33,12 @@
         // position: absolute;
         // background-repeat: no-repeat;
       }
-
+      @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+      { @media {
+        a{
+          transform: translate(140px);
+       }
+      }}
       a {
         color: white;
 
@@ -107,16 +112,19 @@
 
     &-location {
 
+      &-grid{
+        height:100%;
+      }
+
       a {
         color: white;
         position: relative;
         text-align: center;
-        min-height: 625px;
         background-size: cover;
         background-position: center;
         border-bottom: 0;
         @include breakpoint(medium down) {
-          min-height: 200px;
+          min-height: 270px;
         }
 
         &::after {
@@ -159,6 +167,9 @@
             margin-bottom: 40px;
             transition: all 0.4s ease-in-out;
             position: absolute;
+            @include breakpoint(medium down) {
+            top:30px;
+            }
             top: 120px;
             left: 0;
             right: 0;
@@ -170,6 +181,10 @@
         &:hover {
           .title {
             transform: translateY(-200px);
+            @include breakpoint(medium down) {
+              transform: translateY(0);
+              opacity:0;
+            }
             transition: all 0.4s ease-in-out;
           }
 

@@ -9,14 +9,16 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="grid-x blog-list-post">
 		<div class="large-3 cell">
-		<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
-			<div class="post-featured-image" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'featured-small' ); ?>, small], [<?php the_post_thumbnail_url( 'featured-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'featured-large' ); ?>, large], [<?php the_post_thumbnail_url( 'featured-xlarge' ); ?>, xlarge]">
-		<?php else:?>
-			<div class="post-featured-image " style="background-image:url('<?php echo get_theme_mod( 'blog_header_image' ); ?>">
+		<?php if ( get_field( 'post-list-image' ) ) : ?>
+			<div class="post-featured-image " style="background-image:url('<?php echo get_field( 'post-list-image' ); ?>">
+
+			<?php elseif( get_theme_mod( 'blog_list_image' ) ):?>
+			<div class="post-featured-image " style="background-image:url('<?php echo get_theme_mod( 'blog_list_image' ); ?>">
+			<?php else:?>
+				<div class="post-featured-image blog-featured-header">
 		<?php endif;?>
 			</div>
 		</div>

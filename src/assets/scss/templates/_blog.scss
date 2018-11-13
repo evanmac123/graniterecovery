@@ -1,7 +1,6 @@
 //this covers styles for event, archive, blog, and news
 
 .blog{
-
   &-header {
     align-self: flex-end;
     width: 60%;
@@ -21,21 +20,27 @@
       }
     }
   }
+  .blog-list-post article{
+    height: 250px;
+  }
+
   article{
     padding: 0 0 25px 0;
     margin-bottom: 25px;
     border-bottom: 1px $light-gray solid;
+    @include breakpoint(medium down) {
+      height: auto;
+    }
     .blog-list-post{
       .post-featured-image{
         display: block;
         background-size:cover;
         background-position: center;
         width: 90%;
-        height: 100%;
+        height: 220px;
         margin-right:10px;
         @include breakpoint(medium down) {
-          margin-bottom: 20px;
-          height: 120px;
+          height: 160px;
           width:100%;
         }
       }
@@ -45,6 +50,7 @@
       color: $white-gray;
       padding: 0 0 5px 0px;
     }
+
     .entry-content{
       margin-top: 15px;
       width: 100%;
@@ -53,8 +59,9 @@
         float:left;
       }
     }
-    h3, h2{
 
+    h3, h2{
+      margin-bottom:0 !important;
     }
   }
   &.single article{
@@ -91,4 +98,10 @@
       padding-bottom: 20px;
     }
   }
+
+  //single
+  &.single{
+    margin-bottom: 20px;
+  }
+
 }

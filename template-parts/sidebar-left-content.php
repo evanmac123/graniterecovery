@@ -26,7 +26,7 @@
 		</div>
 	</div>
 	<?php elseif( get_row_layout() == 'left-sidebar-under-menu-content-block' ): ?>
-	<div class="home-team grid-x" style="background-image:url('<?php echo get_sub_field( 'sidebar-block-background' ); ?>');">
+	<div class="home-team grid-x" style="background-image:url('<?php echo get_sub_field( 'sidebar-block-background-img' ); ?>');">
 		<div class="home-team-content cell 6 large-6 ">
 			<h3>
 			<?php echo get_sub_field( 'sidebar-block-title' ); ?>
@@ -34,7 +34,7 @@
 			<p>
 				<?php echo get_sub_field( 'sidebar-block-paragraph' ); ?>
 			</p>
-			<a class="button" href="<?php echo get_sub_field( 'sidebar-block-button-link '); ?>">
+			<a class="button" href="<?php echo get_sub_field( 'sidebar-block-button-link'); ?>">
 			 <?php echo get_sub_field( 'sidebar-block-button-text' ); ?>
 		</a>
 		</div>

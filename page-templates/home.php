@@ -45,7 +45,7 @@ get_header(); ?>
 				</div>
 				</div>
 				<div class="large-6  cell home-intro-location">
-					<div class="grid-x" data-equalizer data-equalize-on="large">
+					<div class="grid-x cell home-intro-location-grid" data-equalizer data-equalize-on="large">
 
 					<?php if( have_rows('home-intro-location') ): ?>
 						<?php while( have_rows('home-intro-location') ): the_row();
