@@ -35,7 +35,12 @@ get_header(); ?>
 			<main class="main-content">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'template-parts/content-single', '' ); ?>
-					<?php the_post_navigation(); ?>
+					<?php the_post_navigation(
+						array(
+		            'prev_text'                  => __( 'Previous: %title' ),
+		            'next_text'                  => __( 'Next: %title' ),
+		        )
+					); ?>
 				<?php endwhile; ?>
 			</main>
 			<?php get_sidebar(); ?>

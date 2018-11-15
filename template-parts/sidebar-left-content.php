@@ -43,32 +43,41 @@
 endif;
 endwhile;?>
 	<?php else : ?>
-	<div class="orange">
-		<div class="orange-newsletter">
-			<h4> The GRC Newsletter</h4>
-			<?php
-	$shortcode = get_theme_mod( 'newsletter_shortcode' );
-		echo do_shortcode( $shortcode );
-	?>
-		</div>
-	</div>
-	<?php	if ( get_theme_mod( 'sidebar_featured_background' ) ) :?>
-	<div class="home-team grid-x" style="background-image:url('<?php echo get_theme_mod( 'sidebar_featured_background' ); ?>');">
+	<?php	if ( get_theme_mod( 'sidebar_1_featured_background' ) ) :?>
+	<div class="home-team grid-x" style="background-image:url('<?php echo get_theme_mod( 'sidebar_1_featured_background' ); ?>');">
 		<?php else:?>
-		<div class="home-team grid-x" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sidebar-background.jpg');">
+		<div class="home-team grid-x" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sidebar-1.jpg');">
 			<?php endif; ?>
 			<div class="home-team-content cell 6 large-6 ">
 				<h3>
 
-	<?php echo get_theme_mod( 'sidebar_featured_title' ); ?>
-</h3>
+				<?php echo get_theme_mod( 'sidebar_1_featured_title' ); ?>
+			</h3>
 				<p>
-					<?php echo get_theme_mod( 'sidebar_featured_paragraph' ); ?>
+					<?php echo get_theme_mod( 'sidebar_1_featured_paragraph' ); ?>
 				</p>
-				<a class="button" href="<?php echo get_theme_mod( 'sidebar_featured_button_link' ); ?>">
-	 <?php echo get_theme_mod( 'sidebar_featured_button_text' ); ?>
-</a>
+				<a class="button" href="<?php echo get_theme_mod( 'sidebar_1_featured_button_link' ); ?>">
+	 				<?php echo get_theme_mod( 'sidebar_1_featured_button_text' ); ?>
+			</a>
 			</div>
 		</div>
+		<?php	if ( get_theme_mod( 'sidebar_2_featured_background' ) ) :?>
+		<div class="home-team grid-x" style="background-image:url('<?php echo get_theme_mod( 'sidebar_1_featured_background' ); ?>');">
+			<?php else:?>
+			<div class="home-team grid-x" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sidebar-2.jpg');">
+				<?php endif; ?>
+				<div class="home-team-content cell 6 large-6 ">
+					<h3>
+
+					<?php echo get_theme_mod( 'sidebar_2_featured_title' ); ?>
+				</h3>
+					<p>
+						<?php echo get_theme_mod( 'sidebar_2_featured_paragraph' ); ?>
+					</p>
+					<a class="button" href="<?php echo get_theme_mod( 'sidebar_2_featured_button_link' ); ?>">
+						<?php echo get_theme_mod( 'sidebar_2_featured_button_text' ); ?>
+				</a>
+				</div>
+			</div>
 		<?php endif;?>
 </section>

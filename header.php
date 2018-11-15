@@ -66,16 +66,16 @@
 						</div>
 						<div class="share-bar">
 						<div class="text">FOLLOW</div>
-						<a href="<?php echo get_theme_mod( 'facebook_link' ); ?>">
+						<a target="_blank" href="<?php echo get_theme_mod( 'facebook_link' ); ?>">
 							<img class="icons" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/facebook-square.svg">
 						</a>
-						<a href="<?php echo get_theme_mod( 'instagram_link' ); ?>">
+						<a target="_blank" href="<?php echo get_theme_mod( 'instagram_link' ); ?>">
 							<img class="icons" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/instagram.svg">
 						</a>
-						<a href="<?php echo get_theme_mod( 'youtube_link' ); ?>">
+						<a target="_blank" href="<?php echo get_theme_mod( 'youtube_link' ); ?>">
 							<img class="icons" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/youtube.svg">
 						</a>
-						<a href="<?php echo get_theme_mod( 'pinterest_link' ); ?>">
+						<a target="_blank" href="<?php echo get_theme_mod( 'pinterest_link' ); ?>">
 							<img class="icons" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/pinterest.svg">
 						</a>
 					</div>

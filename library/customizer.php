@@ -169,7 +169,7 @@ $wp_customize->add_section('newsletter_options', array(
 'priority' => 120,
 ));
 
-// add a setting for the sidebar_background
+// add a setting for the sidebar_2_background
 $wp_customize->add_setting('newsletter_shortcode', array(
   'default'   => '',
   'transport' => 'refresh',
@@ -189,78 +189,144 @@ add_action('customize_register', 'newsletter_customize');
 
 /////Sidebar
 
-function sidebar_options_customize($wp_customize) {
-$wp_customize->add_section('sidebar_options', array(
-'title' => 'Sidebar Options',
+function sidebar_1_options_customize($wp_customize) {
+$wp_customize->add_section('sidebar_1_options', array(
+'title' => 'Sidebar Block 1 Settings',
 'description' => '',
 'priority' => 120,
 ));
 
-// add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_background', array(
+// add a setting for the sidebar_1_background
+$wp_customize->add_setting('sidebar_1_featured_background', array(
   'default'   => '',
   'transport' => 'refresh',
 ));
 
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sidebar_featured_background',
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sidebar_1_featured_background',
 array(
 'label' => 'Sidebar Featured Page Background',
-'section' => 'sidebar_options',
-'settings' => 'sidebar_featured_background',
+'section' => 'sidebar_1_options',
+'settings' => 'sidebar_1_featured_background',
 ) ) );
 
-// add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_title', array(
-  'default'   => 'Passion. Purpose. Understanding.',
+// add a setting for the sidebar_1_background
+$wp_customize->add_setting('sidebar_1_featured_title', array(
 ));
 
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_title',
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_1_featured_title',
 array(
 'label' => 'Sidebar Featured Page title',
-'section' => 'sidebar_options',
-'settings' => 'sidebar_featured_title',
+'section' => 'sidebar_1_options',
+'settings' => 'sidebar_1_featured_title',
 ) ) );
 
-// add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_paragraph', array(
-  'default'   => '',
+// add a setting for the sidebar_1_background
+$wp_customize->add_setting('sidebar_1_featured_paragraph', array(
 ));
 
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_paragraph',
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_1_featured_paragraph',
 array(
 'label' => 'Sidebar Featured Page paragraph',
-'section' => 'sidebar_options',
-'settings' => 'sidebar_featured_paragraph',
+'section' => 'sidebar_1_options',
+'settings' => 'sidebar_1_featured_paragraph',
 ) ) );
 
-// add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_button_link', array(
-  'default'   => '',
+// add a setting for the sidebar_1_background
+$wp_customize->add_setting('sidebar_1_featured_button_link', array(
 ));
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_link',
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_1_featured_button_link',
 array(
 'label' => 'Sidebar Featured Page Button Link',
-'section' => 'sidebar_options',
-'settings' => 'sidebar_featured_button_link',
+'section' => 'sidebar_1_options',
+'settings' => 'sidebar_1_featured_button_link',
 ) ) );
 
-// add a setting for the sidebar_background
-$wp_customize->add_setting('sidebar_featured_button_text', array(
-  'default'   => 'Meet Our Team',
+// add a setting for the sidebar_1_background
+$wp_customize->add_setting('sidebar_1_featured_button_text', array(
 ));
 // Add a control to upload the logo
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_featured_button_text', array(
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_1_featured_button_text', array(
 'label' => 'Sidebar Featured Page Text',
-'section' => 'sidebar_options',
-'settings' => 'sidebar_featured_button_text',
+'section' => 'sidebar_1_options',
+'settings' => 'sidebar_1_featured_button_text',
 ) ) );
 }
 
-add_action('customize_register', 'sidebar_options_customize');
+add_action('customize_register', 'sidebar_1_options_customize');
+
+
+function sidebar_2_options_customize($wp_customize) {
+$wp_customize->add_section('sidebar_2_options', array(
+'title' => 'Sidebar Block 2 Settings',
+'description' => '',
+'priority' => 120,
+));
+
+// add a setting for the sidebar_2_background
+$wp_customize->add_setting('sidebar_2_featured_background', array(
+  'transport' => 'refresh',
+));
+
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sidebar_2_featured_background',
+array(
+'label' => 'Sidebar Featured Page Background',
+'section' => 'sidebar_2_options',
+'settings' => 'sidebar_2_featured_background',
+) ) );
+
+// add a setting for the sidebar_2_background
+$wp_customize->add_setting('sidebar_2_featured_title', array(
+));
+
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_2_featured_title',
+array(
+'label' => 'Sidebar Featured Page title',
+'section' => 'sidebar_2_options',
+'settings' => 'sidebar_2_featured_title',
+) ) );
+
+// add a setting for the sidebar_2_background
+$wp_customize->add_setting('sidebar_2_featured_paragraph', array(
+));
+
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_2_featured_paragraph',
+array(
+'label' => 'Sidebar Featured Page paragraph',
+'section' => 'sidebar_2_options',
+'settings' => 'sidebar_2_featured_paragraph',
+) ) );
+
+// add a setting for the sidebar_2_background
+$wp_customize->add_setting('sidebar_2_featured_button_link', array(
+  'default'   => '',
+));
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_2_featured_button_link',
+array(
+'label' => 'Sidebar Featured Page Button Link',
+'section' => 'sidebar_2_options',
+'settings' => 'sidebar_2_featured_button_link',
+) ) );
+
+// add a setting for the sidebar_2_background
+$wp_customize->add_setting('sidebar_2_featured_button_text', array(
+));
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'sidebar_2_featured_button_text', array(
+'label' => 'Sidebar Featured Page Text',
+'section' => 'sidebar_2_options',
+'settings' => 'sidebar_2_featured_button_text',
+) ) );
+}
+
+add_action('customize_register', 'sidebar_2_options_customize');
 
 
 function blog_events_customize($wp_customize) {
@@ -329,6 +395,16 @@ function my_default_total_settings() {
 	set_theme_mod( 'phone_number', '603-339-4160' );
 	set_theme_mod( 'address', '6 Manor Pkwy, Salem, NH 03079' );
 	set_theme_mod( 'copyright', '© Copyright 2018 Granite Recovery Centers' );
-	set_theme_mod( 'newsletter_shortcode', '[ctct form="1199"]' );
+  set_theme_mod( 'sidebar_1_featured_title', 'HOW MUCH<br>WILL MY<br>INSURANCE<br>COVER?' );
+  set_theme_mod( 'sidebar_1_featured_paragraph', '' );
+  set_theme_mod( 'sidebar_1_featured_button_text', 'https://www.graniterecoverycenters.com/drug-treatment-help/verify-insurance-benefits/' );
+  set_theme_mod( 'sidebar_1_featured_button_link', '<strong>Verify Your<br>Benefits Here »</strong>' );
+  set_theme_mod( 'sidebar_1_featured_background', '' );
+	set_theme_mod( 'sidebar_2_featured_title', 'BIG BOOK<br>WORKSHOP<br>DEC. 8th ' );
+  set_theme_mod( 'sidebar_2_featured_paragraph', 'With Marsha and Jonathan S. From Austin TX' );
+  set_theme_mod( 'sidebar_2_featured_button_text', ' <strong>Learn More »</strong>' );
+  set_theme_mod( 'sidebar_2_featured_button_link', 'https://www.graniterecoverycenters.com/event/big-book-workshop-2/' );
+  set_theme_mod( 'sidebar_2_featured_background', '' );
+
 }
 add_action( 'after_switch_theme', 'my_default_total_settings' );

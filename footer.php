@@ -39,22 +39,22 @@
             </div>
             <div class="footer-info-social cell large-6 small-12">
               <?php if ( get_theme_mod( 'facebook_link' ) ) : ?>
-                <a href="<?php echo get_theme_mod( 'facebook_link' ); ?>">
+                <a target="_blank" href="<?php echo get_theme_mod( 'facebook_link' ); ?>">
     							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/facebook-square.svg">
     						</a>
               <?php endif; ?>
               <?php if ( get_theme_mod( 'instagram_link' ) ) : ?>
-  						<a href="<?php echo get_theme_mod( 'instagram_link' ); ?>">
+  						<a target="_blank" href="<?php echo get_theme_mod( 'instagram_link' ); ?>">
   							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/instagram.svg">
   						</a>
               <?php endif; ?>
               <?php if ( get_theme_mod( 'youtube_link' ) ) : ?>
-  						<a href="<?php echo get_theme_mod( 'youtube_link' ); ?>">
+  						<a target="_blank" href="<?php echo get_theme_mod( 'youtube_link' ); ?>">
   							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/youtube.svg">
   						</a>
               <?php endif; ?>
               <?php if ( get_theme_mod( 'pinterest_link' ) ) : ?>
-  						<a href="<?php echo get_theme_mod( 'pinterest_link' ); ?>">
+  						<a target="_blank" href="<?php echo get_theme_mod( 'pinterest_link' ); ?>">
   							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/pinterest.svg">
   						</a>
             <?php endif; ?>

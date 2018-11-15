@@ -34,11 +34,11 @@
         // background-repeat: no-repeat;
       }
       @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-      { @media {
-        a{
-          transform: translate(140px);
+      {
+        .ms-view{
+          -webkit-perspective: initial;
        }
-      }}
+      }
       a {
         color: white;
 
