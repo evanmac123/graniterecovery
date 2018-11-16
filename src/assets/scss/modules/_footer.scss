@@ -1,13 +1,14 @@
 .footer {
   background-color: $black;
   color: $white;
+  z-index:100;
 
   .footer-container {
     @include xy-grid-container;
     border-top: 1px solid $medium-gray;
     padding-top: rem-calc(30);
 
-    .menu-footer-container {
+    .menu-footer-container, .widget_nav_menu {
       li {
         width: 100%;
 
@@ -15,10 +16,11 @@
           font-family: $header-font-family;
           color: $green;
           font-size: 15px;
-          transition: all 0.4s;
+          padding: 0.7rem 1rem;
+          //transition: color 0.4s;
 
           &:hover {
-            transition: all 0.4s;
+            //transition: color 0.4s;
             color: $red;
           }
         }
@@ -113,5 +115,24 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+}
+.contact-us{
+  //color: $red;
+}
+
+.footer-button{
+  color: $white;
+  border: 2px solid red;
+  background-color: transparent;
+  padding: 10px;
+  width: 75%;
+  margin-top: 10px;
+  font-weight: bold;
+  float:left;
+  text-align:center;
+  &:hover{
+    background-color: $white;
+    color: $red;
   }
 }
