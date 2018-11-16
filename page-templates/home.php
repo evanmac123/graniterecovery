@@ -405,7 +405,7 @@ get_header(); ?>
             </h2>
 
             <a href="/contact" class="footer-button">
-              Contact Us
+              USE OUR CONTACT FORM
             </a>
           </div>
         </div>

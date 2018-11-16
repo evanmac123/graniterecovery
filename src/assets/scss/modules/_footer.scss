@@ -8,6 +8,10 @@
     border-top: 1px solid $medium-gray;
     padding-top: rem-calc(30);
 
+    .menu-footer-container li{
+      padding: 4px 0;
+    }
+
     .menu-footer-container, .widget_nav_menu {
       li {
         width: 100%;
@@ -17,10 +21,10 @@
           color: $green;
           font-size: 15px;
           padding: 0.7rem 1rem;
-          //transition: color 0.4s;
+          transition: color 0.4s;
 
           &:hover {
-            //transition: color 0.4s;
+            transition: color 0.4s;
             color: $red;
           }
         }
