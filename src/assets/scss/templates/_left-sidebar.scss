@@ -13,6 +13,7 @@
     background-position: center;
     @include breakpoint(medium down) {
       height: 300px;
+      padding: 1rem 2.5rem;
     }
     &::after {
       content: ""; // ::before and ::after both require content

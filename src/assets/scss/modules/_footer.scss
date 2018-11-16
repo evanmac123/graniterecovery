@@ -1,15 +1,22 @@
 .footer {
   background-color: $black;
   color: $white;
-  z-index:100;
+  margin-top: 2em;
+  @include breakpoint(medium down) {
+    padding: 2.5rem;
+  }
+
 
   .footer-container {
     @include xy-grid-container;
-    border-top: 1px solid $medium-gray;
-    padding-top: rem-calc(30);
+    padding-top: rem-calc(15);
 
     .menu-footer-container li{
       padding: 4px 0;
+    }
+
+    .cell{
+      margin-bottom: 20px;
     }
 
     .menu-footer-container, .widget_nav_menu {
@@ -20,7 +27,7 @@
           font-family: $header-font-family;
           color: $green;
           font-size: 15px;
-          padding: 0.7rem 1rem;
+          padding: 0.7rem 0rem;
           transition: color 0.4s;
 
           &:hover {
