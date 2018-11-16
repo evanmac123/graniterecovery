@@ -7,7 +7,7 @@
     border-top: 1px solid $medium-gray;
     padding-top: rem-calc(30);
 
-    .widget_nav_menu {
+    .menu-footer-container {
       li {
         width: 100%;
 
@@ -103,20 +103,10 @@
       width: 100%;
     }
   }
-}
+
 
 .footer-grid {
-  @include xy-grid;
   padding: rem-calc(30) 0;
-
-  section {
-    @include xy-cell();
-    @include breakpoint(large) {
-      @include xy-cell(auto);
-    }
-    @include breakpoint(medium down) {
-      margin-bottom: 2rem;
-    }
   }
 
   ul {

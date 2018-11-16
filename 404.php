@@ -7,7 +7,8 @@
  */
 
 get_header(); ?>
-
+<div class="featured-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/assets/images/404.jpg');">
+</div>
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">

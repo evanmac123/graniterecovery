@@ -397,8 +397,8 @@ function my_default_total_settings() {
 	set_theme_mod( 'copyright', '© Copyright 2018 Granite Recovery Centers' );
   set_theme_mod( 'sidebar_1_featured_title', 'HOW MUCH<br>WILL MY<br>INSURANCE<br>COVER?' );
   set_theme_mod( 'sidebar_1_featured_paragraph', '' );
-  set_theme_mod( 'sidebar_1_featured_button_text', 'https://www.graniterecoverycenters.com/drug-treatment-help/verify-insurance-benefits/' );
-  set_theme_mod( 'sidebar_1_featured_button_link', '<strong>Verify Your<br>Benefits Here »</strong>' );
+  set_theme_mod( 'sidebar_1_featured_button_link', 'https://www.graniterecoverycenters.com/drug-treatment-help/verify-insurance-benefits/' );
+  set_theme_mod( 'sidebar_1_featured_button_text', '<strong>Verify Your<br>Benefits Here »</strong>' );
   set_theme_mod( 'sidebar_1_featured_background', '' );
 	set_theme_mod( 'sidebar_2_featured_title', 'BIG BOOK<br>WORKSHOP<br>DEC. 8th ' );
   set_theme_mod( 'sidebar_2_featured_paragraph', 'With Marsha and Jonathan S. From Austin TX' );

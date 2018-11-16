@@ -291,7 +291,6 @@ get_header(); ?>
 						    'posts_per_page'   => 4, // -1 here will return all posts
 						    'post_type'        => 'news', //your custom post type
 						    'post_status'      => 'publish',
-
 						);
 						$the_query = new WP_Query( $args );
 
