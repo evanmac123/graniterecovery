@@ -41,7 +41,7 @@
                             "collapsed": "",
                             "min": 0,
                             "max": 0,
-                            "layout": "block",
+                            "layout": "row",
                             "button_label": "",
                             "sub_fields": [
                                 {
@@ -155,6 +155,13 @@
                 "operator": "==",
                 "value": "page-templates\/page-sidebar-left.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/page-full-width.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -173,5 +180,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1541456232
+    "modified": 1544204896
 }

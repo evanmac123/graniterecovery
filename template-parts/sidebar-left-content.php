@@ -62,7 +62,7 @@ endwhile;?>
 			</div>
 		</div>
 		<?php	if ( get_theme_mod( 'sidebar_2_featured_background' ) ) :?>
-		<div class="home-team grid-x" style="background-image:url('<?php echo get_theme_mod( 'sidebar_1_featured_background' ); ?>');">
+		<div class="home-team grid-x" style="background-image:url('<?php echo get_theme_mod( 'sidebar_2_featured_background' ); ?>');">
 			<?php else:?>
 			<div class="home-team grid-x" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/sidebar-2.jpg');">
 				<?php endif; ?>

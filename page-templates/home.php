@@ -112,7 +112,7 @@ get_header(); ?>
 							<?php echo $video_author_position_1; ?>
 						</div>
 					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/play.svg">
+					<image src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/icons/play.svg">
 				</a>
 			</div>
 			<div class="home-video-cell cell large-4 video-section-2">
@@ -127,7 +127,7 @@ get_header(); ?>
 							<div class="home-video-cell-position">
 								<?php echo $video_author_position_2; ?>
 							</div>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
+							<image src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
 						</div>
 					</a>
 					<a data-open="video3-<?php echo $i ?>" style="background-image:url('<?php echo $video_still_3; ?>');">
@@ -141,7 +141,7 @@ get_header(); ?>
 							<div class="home-video-cell-position">
 								<?php echo $video_author_position_3; ?>
 							</div>
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
+								<image src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/play.svg">
 					</div>
 				</a>
 			</div>
@@ -226,7 +226,7 @@ get_header(); ?>
 		<div class=" cell large-6">
 			<div class="seen">
 				<div class="block-title">
-					<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/mega.svg">
+					<image class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/mega.svg">
 					<h4>
 						GRC IN THE NEWS
 					</h4>
@@ -246,7 +246,7 @@ get_header(); ?>
 		<div class=" cell large-6">
 			<div class="grid-x grid-padding-x medium-padding-collapse">
 				<div class=" cell medium-6 events">
-					<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/calendar.svg">
+					<image class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/calendar.svg">
 					<h4>
 						Upcoming Events
 					</h4>
@@ -281,7 +281,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class=" cell medium-6 news">
-					<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/news.svg">
+					<image class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/news.svg">
 					<h4>
 						Recent News
 					</h4>
@@ -341,22 +341,22 @@ get_header(); ?>
             <div class="footer-info-social cell large-6 small-12">
               <?php if ( get_theme_mod( 'facebook_link' ) ) : ?>
                 <a target="_blank" href="<?php echo get_theme_mod( 'facebook_link' ); ?>">
-    							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/facebook-square.svg">
+    							<image class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/facebook-square.svg">
     						</a>
               <?php endif; ?>
               <?php if ( get_theme_mod( 'instagram_link' ) ) : ?>
   						<a target="_blank" href="<?php echo get_theme_mod( 'instagram_link' ); ?>">
-  							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/instagram.svg">
+  							<image class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/instagram.svg">
   						</a>
               <?php endif; ?>
               <?php if ( get_theme_mod( 'youtube_link' ) ) : ?>
   						<a target="_blank" href="<?php echo get_theme_mod( 'youtube_link' ); ?>">
-  							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/youtube.svg">
+  							<image class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/youtube.svg">
   						</a>
               <?php endif; ?>
               <?php if ( get_theme_mod( 'pinterest_link' ) ) : ?>
   						<a target="_blank" href="<?php echo get_theme_mod( 'pinterest_link' ); ?>">
-  							<img class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/pinterest.svg">
+  							<image class="icons" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/icons/pinterest.svg">
   						</a>
             <?php endif; ?>
             </div>
