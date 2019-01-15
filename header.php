@@ -93,11 +93,11 @@
 									<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/mobile-logo.png"/>
 							<?php } ?>
 					</a>
-					<div class="top-bar-right-menu-number">
-							<?php if ( get_theme_mod( 'phone_number' ) ) : ?>
-						<?php echo get_theme_mod( 'phone_number' ); ?>
-						<?php endif; ?>
-					</div>
+					<?php if ( get_theme_mod( 'phone_number' ) ) : ?>
+						<a href="tel:<?php echo get_theme_mod( 'phone_number' ); ?>" class="top-bar-right-menu-number">
+							<?php echo get_theme_mod( 'phone_number' ); ?>
+						</a>
+					<?php endif; ?>
 					<div class="top-bar-right-menu-items">
 					<?php foundationpress_top_bar_r(); ?>
 					</div>

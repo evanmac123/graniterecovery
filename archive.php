@@ -30,7 +30,7 @@ get_header(); ?>
 									bcn_display();
 							}?>
 				</div>
-				<h1>GRC Blog: <?php single_cat_title();?></h1>
+				<h2>GRC Blog: <?php single_cat_title();?></h2>
 				</div>
 	</div>
 

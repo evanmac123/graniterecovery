@@ -17,7 +17,7 @@ get_header(); ?>
 									bcn_display();
 							}?>
 				</div>
-				<h1>GRC Events</h1>
+				<h2 class="h1">GRC Events</h2>
 				</div>
 	</div>
 	<?php ?>
